@@ -1,0 +1,273 @@
+/* Unified typography: shared sizes replace accumulated one-off values. */
+:root {
+--font-size-base: 1rem;
+--type-micro: 0.6875rem;
+--type-caption: 0.75rem;
+--type-ui: 0.8125rem;
+--type-body-sm: 0.875rem;
+--type-body-md: 0.9375rem;
+--type-body: 1rem;
+--type-lead: 1.0625rem;
+--type-lead-lg: 1.125rem;
+--type-section: 1.25rem;
+}
+body {
+font-size: var(--font-size-base);
+}
+strong,
+b {
+font-weight: 500;
+}
+.brand-copy span,
+.kicker,
+.eyebrow,
+.hero-stat span,
+.map-meta,
+.map-node small,
+.map-center small,
+.force-strip-head h3,
+.force-chip span,
+.inspector-no,
+.inspector-archetype,
+.inspector-fact dt,
+.detail-topline,
+.signature-label,
+.force-relation-label,
+.detail-block h3,
+.preset-label,
+.force-value,
+.lab-meta span,
+.lab-anchor strong,
+.bridge-night-eyebrow,
+.bridge-fit-state,
+.bridge-meta-item span,
+.bridge-section-label,
+.bridge-link-row dt,
+.model-field span,
+.model-tension > span,
+.case-marker span,
+.case-company,
+.case-bridge strong,
+.about-step > span,
+.about-page-link span,
+.pattern-story h3,
+.pattern-org-lens h3,
+.design-epicenter span,
+.design-detail-body h3,
+.design-section-title,
+.design-step span,
+.design-force h3 {
+font-size: var(--type-micro);
+line-height: 1.25;
+letter-spacing: 0.075em;
+}
+.map-svg .axis-copy {
+font-size: 11px;
+letter-spacing: 0.05em;
+}
+.language-picker,
+.nav-index {
+font-size: var(--type-micro);
+}
+.language-picker select,
+.nav-button,
+.secondary-form,
+.preset,
+.bridge-option,
+.case-link,
+.case-bridge-action,
+.pattern-action,
+.about-cta,
+.form-index-button {
+font-size: var(--type-ui);
+line-height: 1.3;
+letter-spacing: 0;
+}
+.map-node strong,
+.force-chip strong,
+.force-control-head label,
+.pattern-index-button,
+.about-page-link strong {
+font-size: var(--type-body-sm);
+line-height: 1.3;
+}
+.bridge-preset-copy,
+.inspector-copy,
+.detail-block p,
+.force-control p,
+.lab-caveat,
+.bridge-link-row dd,
+.bridge-tension p,
+.model-field p,
+.pattern-story p,
+.pattern-org-lens p,
+.pattern-example,
+.canvas-inspector-body p,
+.design-detail-body p,
+.design-process p,
+.design-force p,
+.about-step p,
+.about-page-link p,
+.about-note li,
+.case-source-note {
+font-size: var(--type-body-sm);
+line-height: 1.5;
+letter-spacing: 0;
+}
+.case-passage {
+font-size: var(--type-body-md);
+line-height: 1.58;
+}
+.hero-intro,
+.section-head p,
+.view-header p {
+font-size: var(--type-lead);
+line-height: 1.55;
+}
+.mission-note,
+.detail-lead,
+.pattern-detail-head p,
+.canvas-question,
+.design-question {
+font-size: var(--type-lead-lg);
+line-height: 1.42;
+}
+.balance-rule,
+.bridge-experiment p,
+.case-bridge,
+.route-detail .condition,
+.about-note > p {
+font-size: var(--type-body);
+line-height: 1.45;
+}
+.bridge-link-row dd strong {
+font-size: var(--type-body-sm);
+line-height: 1.3;
+}
+.bridge-whatif p {
+font-size: var(--type-section);
+line-height: 1.3;
+}
+.brand-seal,
+.bridge-reset {
+font-size: var(--type-caption);
+}
+.brand-copy strong,
+.bridge-meta-item strong {
+font-size: var(--type-lead-lg);
+}
+.bridge-group legend {
+font-size: var(--type-section);
+}
+.bridge-group p {
+font-size: var(--type-caption);
+line-height: 1.4;
+}
+.bridge-fit-summary {
+font-size: var(--type-lead);
+line-height: 1.45;
+}
+.bridge-tension h3 {
+font-size: var(--type-section);
+line-height: 1.2;
+}
+.font-license-full,
+footer {
+font-size: var(--type-caption);
+line-height: 1.5;
+}
+.structure-svg text {
+font-size: 11px;
+letter-spacing: 0.06em;
+}
+@media (max-width: 620px) {
+.nav-button {
+font-size: var(--type-micro);
+}
+.hero-intro,
+.section-head p,
+.view-header p {
+font-size: var(--type-body);
+}
+}
+@media (max-width: 1240px) {
+.nav-toggle {
+display: inline-grid;
+flex: 0 0 auto;
+}
+.primary-nav {
+display: none;
+position: absolute;
+top: 100%;
+left: 50%;
+z-index: 40;
+width: min(calc(100vw - 1.3rem), var(--content));
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 1px;
+padding: 1px;
+border: 1px solid var(--line-strong);
+background: var(--line);
+box-shadow: var(--shadow);
+transform: translateX(-50%);
+overflow: visible;
+}
+.primary-nav.is-open {
+display: grid;
+}
+.primary-nav .nav-button {
+min-height: 48px;
+padding: 0.7rem 0.8rem;
+border: 0;
+background: var(--surface);
+text-align: left;
+}
+.primary-nav .nav-button:hover,
+.primary-nav .nav-button[aria-selected="true"] {
+background: var(--paper-deep);
+}
+.primary-nav .nav-button::after {
+right: 0.8rem;
+bottom: 0;
+left: 0.8rem;
+}
+.header-tools {
+justify-content: flex-end;
+}
+.language-picker {
+order: 1;
+}
+.nav-toggle {
+order: 2;
+}
+}
+@media (max-width: 620px) {
+.primary-nav {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.header-tools {
+flex-direction: row;
+align-items: center;
+justify-content: flex-end;
+gap: 0.6rem;
+}
+.language-picker {
+order: 1;
+}
+.nav-toggle {
+order: 2;
+align-self: center;
+}
+}
+@media (prefers-reduced-motion: reduce) {
+html {
+scroll-behavior: auto;
+}
+.view {
+animation: none;
+}
+*,
+*::before,
+*::after {
+transition-duration: 0.01ms !important;
+}
+}

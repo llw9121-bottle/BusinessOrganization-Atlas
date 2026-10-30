@@ -1,0 +1,48 @@
+:root {
+color-scheme: light;
+--paper: #f3efe6;
+--paper-deep: #e9e2d5;
+--surface: #fbf8f1;
+--ink: #1e2926;
+--ink-soft: #53605b;
+--muted: #5f645f;
+--line: #d5cec0;
+--line-strong: #aaa397;
+--accent: #a5442e;
+--accent-deep: #8e3826;
+--teal: #326c63;
+--gold: #c19b3b;
+--dark: #21312d;
+--light: #fffdf8;
+--radius: 2px;
+--cjk: "Noto Sans SC", "Noto Sans SC B";
+--serif: "Inter", var(--cjk), sans-serif;
+--sans: "Inter", var(--cjk), sans-serif;
+--mono: "Inter", var(--cjk), sans-serif;
+--shadow: 0 18px 50px rgba(43, 45, 40, 0.08);
+--content: 1440px;
+--map-note: "FIT IS A MOVING TARGET";
+--secondary-note: "THREE FORMS OUTSIDE THE DIAMOND";
+}
+html[lang="zh-CN"] {
+--map-note: "适配是移动目标";
+--secondary-note: "菱形图之外的三种形态";
+}
+html[lang="ja"] {
+--cjk: "Noto Sans JP", "Noto Sans JP B", "Noto Sans JP C", "Noto Sans JP D";
+--map-note: "適合は動き続ける";
+--secondary-note: "ひし形の外にある三つの形態";
+}
+html[lang="ko"] {
+--cjk: "Noto Sans KR", "Noto Sans KR B";
+--map-note: "적합성은 계속 움직입니다";
+--secondary-note: "다이아몬드 밖의 세 가지 형태";
+}
+html[lang="es"] {
+--map-note: "EL ENCAJE ES MÓVIL";
+--secondary-note: "TRES FORMAS FUERA DEL ROMBO";
+}
+html[lang="fr"] {
+--map-note: "L’AJUSTEMENT EST MOUVANT";
+--secondary-note: "TROIS FORMES HORS DU LOSANGE";
+}

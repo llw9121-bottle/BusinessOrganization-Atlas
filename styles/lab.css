@@ -1,0 +1,178 @@
+.lab-layout {
+display: grid;
+grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.7fr);
+gap: clamp(1.4rem, 3vw, 3rem);
+padding-top: 2rem;
+}
+.preset-block {
+padding-bottom: 1.3rem;
+border-bottom: 1px solid var(--line-strong);
+}
+.preset-label {
+display: block;
+margin-bottom: 0.65rem;
+color: var(--muted);
+font-family: var(--mono);
+font-size: 0.61rem;
+letter-spacing: 0.09em;
+text-transform: uppercase;
+}
+.preset-row {
+display: flex;
+flex-wrap: wrap;
+gap: 0.45rem;
+}
+.preset {
+min-height: 38px;
+padding: 0.4rem 0.66rem;
+border: 1px solid var(--line-strong);
+background: transparent;
+cursor: pointer;
+font-size: 0.72rem;
+}
+.preset:hover,
+.preset[aria-pressed="true"] {
+border-color: var(--accent);
+background: rgba(184, 82, 56, 0.08);
+}
+.sliders-grid {
+display: grid;
+grid-template-columns: repeat(2, minmax(0, 1fr));
+column-gap: 1.5rem;
+}
+.mobile-lab-summary {
+display: none;
+}
+.force-control {
+padding-block: 1rem;
+border-bottom: 1px solid var(--line);
+}
+.force-control.is-dominant {
+border-bottom-color: var(--accent);
+}
+.force-control-head {
+display: flex;
+align-items: baseline;
+justify-content: space-between;
+gap: 0.75rem;
+}
+.force-control-head label {
+font-family: var(--serif);
+font-size: 1.12rem;
+}
+.force-value {
+color: var(--accent-deep);
+font-family: var(--mono);
+font-size: 0.63rem;
+}
+.force-control p {
+min-height: 2.7em;
+margin-top: 0.16rem;
+color: var(--muted);
+font-size: 0.7rem;
+line-height: 1.35;
+}
+input[type="range"] {
+width: 100%;
+height: 28px;
+margin: 0.45rem 0 0;
+accent-color: var(--accent);
+cursor: pointer;
+}
+.lab-result {
+position: sticky;
+top: 104px;
+align-self: start;
+overflow: hidden;
+border-top: 3px solid var(--accent);
+background: var(--surface);
+box-shadow: var(--shadow);
+}
+.lab-result-body {
+padding: clamp(1.4rem, 2.8vw, 2.3rem);
+}
+.lab-result h3 {
+margin-top: 0.4rem;
+font-size: clamp(2.3rem, 4vw, 3.7rem);
+}
+.lab-summary {
+margin-top: 0.85rem;
+color: var(--ink-soft);
+font-family: var(--serif);
+font-size: 1.08rem;
+line-height: 1.46;
+}
+.lab-diagram {
+margin-top: 1.2rem;
+padding-top: 0.9rem;
+border-top: 1px solid var(--line);
+}
+.lab-meta {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 1px;
+margin-top: 1.2rem;
+background: var(--line);
+border: 1px solid var(--line);
+}
+.lab-meta div {
+min-height: 86px;
+padding: 0.75rem;
+background: var(--paper);
+}
+.lab-meta span {
+display: block;
+color: var(--muted);
+font-family: var(--mono);
+font-size: 0.55rem;
+letter-spacing: 0.08em;
+text-transform: uppercase;
+}
+.lab-meta strong {
+display: block;
+margin-top: 0.38rem;
+font-family: var(--serif);
+font-size: 1.02rem;
+font-weight: 400;
+line-height: 1.2;
+}
+.lab-anchor {
+padding: 1rem clamp(1.4rem, 2.8vw, 2.3rem);
+border-top: 1px solid var(--line);
+background: rgba(50, 108, 99, 0.08);
+color: var(--ink-soft);
+font-size: 0.82rem;
+line-height: 1.5;
+}
+.lab-anchor strong {
+color: var(--teal);
+font-family: var(--mono);
+font-size: 0.62rem;
+font-weight: 500;
+letter-spacing: 0.07em;
+text-transform: uppercase;
+}
+.lab-reset {
+margin-top: 1.2rem;
+padding: 0;
+border: 0;
+border-bottom: 1px solid currentColor;
+background: transparent;
+color: var(--ink-soft);
+cursor: pointer;
+font-size: 0.72rem;
+}
+.lab-caveat {
+max-width: 68ch;
+margin-block: 2.3rem 0;
+padding-top: 1rem;
+border-top: 1px solid var(--line);
+color: var(--muted);
+font-size: 0.77rem;
+line-height: 1.5;
+}
+
+/* The reset button block sits flush against the result body. */
+#view-forces .lab-result-body {
+padding-top: 0;
+}

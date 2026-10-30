@@ -1,0 +1,1356 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="description" content="An interactive atlas connecting business-model design, organizational forms, and the forces that shape how value logic meets coordination logic.">
+  <title>Business × Organization Atlas</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles/fonts.css">
+  <link rel="stylesheet" href="styles/tokens.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/atlas.css">
+  <link rel="stylesheet" href="styles/forms.css">
+  <link rel="stylesheet" href="styles/lab.css">
+  <link rel="stylesheet" href="styles/bridge.css">
+  <link rel="stylesheet" href="styles/canvas.css">
+  <link rel="stylesheet" href="styles/patterns.css">
+  <link rel="stylesheet" href="styles/design.css">
+  <link rel="stylesheet" href="styles/cases.css">
+  <link rel="stylesheet" href="styles/about.css">
+  <link rel="stylesheet" href="styles/transitions.css">
+  <link rel="stylesheet" href="styles/footer.css">
+  <link rel="stylesheet" href="styles/responsive.css">
+  <link rel="stylesheet" href="styles/overrides.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="masthead">
+    <div class="shell masthead-inner">
+      <div class="brand" aria-label="Business and organization atlas">
+        <span class="brand-seal" aria-hidden="true">B×O</span>
+        <span class="brand-copy">
+          <strong>Business × Organization Atlas</strong>
+          <span>Models · forms · forces</span>
+        </span>
+      </div>
+
+      <div class="header-tools">
+        <nav class="primary-nav" id="primary-nav" role="tablist" aria-label="Atlas sections">
+          <button class="nav-button" id="tab-bridge" type="button" role="tab" aria-selected="true" aria-controls="view-bridge" data-view="bridge">
+            <span class="nav-index">01</span> Bridge
+          </button>
+          <button class="nav-button" id="tab-canvas" type="button" role="tab" aria-selected="false" aria-controls="view-canvas" data-view="canvas">
+            <span class="nav-index">02</span> Canvas
+          </button>
+          <button class="nav-button" id="tab-patterns" type="button" role="tab" aria-selected="false" aria-controls="view-patterns" data-view="patterns">
+            <span class="nav-index">03</span> Patterns
+          </button>
+          <button class="nav-button" id="tab-design" type="button" role="tab" aria-selected="false" aria-controls="view-design" data-view="design">
+            <span class="nav-index">04</span> Design
+          </button>
+          <button class="nav-button" id="tab-cases" type="button" role="tab" aria-selected="false" aria-controls="view-cases" data-view="cases">
+            <span class="nav-index">05</span> Cases
+          </button>
+          <button class="nav-button" id="tab-atlas" type="button" role="tab" aria-selected="false" aria-controls="view-atlas" data-view="atlas">
+            <span class="nav-index">06</span> Atlas
+          </button>
+          <button class="nav-button" id="tab-forms" type="button" role="tab" aria-selected="false" aria-controls="view-forms" data-view="forms">
+            <span class="nav-index">07</span> Forms
+          </button>
+          <button class="nav-button" id="tab-forces" type="button" role="tab" aria-selected="false" aria-controls="view-forces" data-view="forces">
+            <span class="nav-index">08</span> Forces
+          </button>
+          <button class="nav-button" id="tab-transitions" type="button" role="tab" aria-selected="false" aria-controls="view-transitions" data-view="transitions">
+            <span class="nav-index">09</span> Change
+          </button>
+          <button class="nav-button" id="tab-about" type="button" role="tab" aria-selected="false" aria-controls="view-about" data-view="about">
+            <span class="nav-index">10</span> About
+          </button>
+        </nav>
+
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation">
+          <span class="nav-toggle-icon" aria-hidden="true"></span>
+          <span class="sr-only" id="nav-toggle-label">Open navigation</span>
+        </button>
+
+        <label class="language-picker">
+          <span>Language</span>
+          <select id="language-select" data-no-translate aria-label="Language">
+            <option value="en">English</option>
+            <option value="zh">简体中文</option>
+            <option value="ja">日本語</option>
+            <option value="ko">한국어</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+          </select>
+        </label>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="shell">
+    <section class="view" id="view-atlas" role="tabpanel" aria-labelledby="tab-atlas" hidden>
+      <div class="hero">
+        <div>
+          <div class="kicker">Henry Mintzberg · Understanding Organizations...Finally!</div>
+          <h1>No single best way <em>to organize.</em></h1>
+          <p class="hero-intro">
+            A practical map of seven recurring organizational forms, the forces that pull them into shape, and the balance that keeps any one force from taking over.
+          </p>
+        </div>
+
+        <aside class="hero-aside" aria-label="Guide summary">
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <strong>07</strong>
+              <span>forms</span>
+            </div>
+            <div class="hero-stat">
+              <strong>07</strong>
+              <span>forces</span>
+            </div>
+          </div>
+          <p class="mission-note">“Fit where necessary, but not necessarily fit.” Forms are useful lenses, never the whole living organization.</p>
+        </aside>
+      </div>
+
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">The field atlas</span>
+          <h2>Four fundamentals, three conditions.</h2>
+        </div>
+        <p>
+          The diamond places the four fundamental forms by their most revealing tensions. Select any form to read its coordination engine, power pattern, likely strengths, and signature risk.
+        </p>
+      </div>
+
+      <div class="atlas-layout">
+        <div class="map-panel">
+          <div class="map-meta">
+            <span><strong>Configuration map</strong> · ideal types</span>
+            <span>Select to inspect</span>
+          </div>
+
+          <div class="form-map" aria-label="Interactive map of four fundamental organizational forms">
+            <svg class="map-svg" viewBox="0 0 600 440" aria-hidden="true">
+              <path class="diamond" d="M300 42 L560 220 L300 398 L40 220 Z"/>
+              <path class="guide" d="M300 42 V398 M40 220 H560"/>
+              <path class="guide" d="M300 160 A60 60 0 0 1 360 220 M360 220 A60 60 0 0 1 300 280 M300 280 A60 60 0 0 1 240 220 M240 220 A60 60 0 0 1 300 160"/>
+              <text class="axis-copy" x="249" y="27">stable</text>
+              <text class="axis-copy" x="18" y="224">central</text>
+              <text class="axis-copy" x="276" y="426">dynamic</text>
+              <text class="axis-copy" x="515" y="224">decentral</text>
+            </svg>
+
+            <button class="map-node node-programmed" type="button" data-form="programmed" aria-pressed="false">
+              <small>01 · stable</small>
+              <strong>Programmed Machine</strong>
+            </button>
+            <button class="map-node node-personal" type="button" data-form="personal" aria-pressed="false">
+              <small>02 · central</small>
+              <strong>Personal Enterprise</strong>
+            </button>
+            <button class="map-node node-professional" type="button" data-form="professional" aria-pressed="false">
+              <small>03 · expert</small>
+              <strong>Professional Assembly</strong>
+            </button>
+            <button class="map-node node-project" type="button" data-form="project" aria-pressed="false">
+              <small>04 · dynamic</small>
+              <strong>Project Pioneer</strong>
+            </button>
+
+            <div class="map-center" aria-hidden="true">
+              <span>
+                <strong>Anchored<br>or hybrid</strong>
+                <small>dynamic balance</small>
+              </span>
+            </div>
+          </div>
+
+          <div class="secondary-forms" aria-label="Three additional organizational forms">
+            <button class="secondary-form" type="button" data-form="divisional" aria-pressed="false">
+              <span>05 · separation</span>
+              Divisional Form
+            </button>
+            <button class="secondary-form" type="button" data-form="community" aria-pressed="false">
+              <span>06 · culture</span>
+              Community Ship
+            </button>
+            <button class="secondary-form" type="button" data-form="political" aria-pressed="false">
+              <span>07 · conflict</span>
+              Political Arena
+            </button>
+          </div>
+        </div>
+
+        <aside class="atlas-inspector" aria-live="polite">
+          <div class="inspector-top">
+            <span class="inspector-no" id="inspector-number">02 · Personal Enterprise</span>
+            <h3 id="inspector-title">Personal Enterprise</h3>
+            <div class="inspector-archetype" id="inspector-archetype">Autocracy · consolidation</div>
+            <div class="inspector-diagram" id="inspector-diagram"></div>
+          </div>
+          <div class="inspector-copy" id="inspector-copy">
+            A loose, founder-centered system coordinated directly by a chief with a wide span of control.
+          </div>
+          <dl class="inspector-facts">
+            <div class="inspector-fact">
+              <dt>Coordinate</dt>
+              <dd id="inspector-coordination">Direct supervision</dd>
+            </div>
+            <div class="inspector-fact">
+              <dt>Power</dt>
+              <dd id="inspector-power">Centralized in the chief</dd>
+            </div>
+            <div class="inspector-fact">
+              <dt>Works when</dt>
+              <dd id="inspector-conditions">Simple or new; crisis; founder-led change</dd>
+            </div>
+            <div class="inspector-fact">
+              <dt>Watch for</dt>
+              <dd id="inspector-risk">Single point of failure; detail or vision can crowd out the other</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+
+      <div class="force-strip">
+        <div class="force-strip-head">
+          <h3>Seven forces in the field</h3>
+          <span>Open the studio to balance them →</span>
+        </div>
+        <div class="force-chips">
+          <button class="force-chip" type="button" data-force="consolidation"><span>Force 01</span><strong>Consolidation</strong></button>
+          <button class="force-chip" type="button" data-force="efficiency"><span>Force 02</span><strong>Efficiency</strong></button>
+          <button class="force-chip" type="button" data-force="proficiency"><span>Force 03</span><strong>Proficiency</strong></button>
+          <button class="force-chip" type="button" data-force="collaboration"><span>Force 04</span><strong>Collaboration</strong></button>
+          <button class="force-chip" type="button" data-force="separation"><span>Force 05</span><strong>Separation</strong></button>
+          <button class="force-chip" type="button" data-force="culture"><span>Force 06</span><strong>Culture</strong></button>
+          <button class="force-chip" type="button" data-force="conflict"><span>Force 07</span><strong>Conflict</strong></button>
+        </div>
+      </div>
+
+      <div class="field-note">
+        <strong>The design premise</strong>
+        <p>Pure forms are caricatures. Real organizations hold a dominant force in check with another force, or combine different forms in different parts of the enterprise.</p>
+      </div>
+    </section>
+
+    <section class="view" id="view-forms" role="tabpanel" aria-labelledby="tab-forms" hidden>
+      <div class="view-header">
+        <div>
+          <span class="eyebrow">Seven forms</span>
+          <h2>One grammar.<br>Many structures.</h2>
+        </div>
+        <p>
+          Each form resolves coordination differently. The useful question is not “Which is best?” but “Which force does this work require, and what will keep that force from becoming pathological?”
+        </p>
+      </div>
+
+      <div class="forms-layout">
+        <nav class="form-index" aria-label="Organizational forms">
+          <button class="form-index-button" type="button" data-form-index="personal" aria-current="true">
+            <span class="index">01</span><span>Personal Enterprise</span><span class="dot"></span>
+          </button>
+          <button class="form-index-button" type="button" data-form-index="programmed" aria-current="false">
+            <span class="index">02</span><span>Programmed Machine</span><span class="dot"></span>
+          </button>
+          <button class="form-index-button" type="button" data-form-index="professional" aria-current="false">
+            <span class="index">03</span><span>Professional Assembly</span><span class="dot"></span>
+          </button>
+          <button class="form-index-button" type="button" data-form-index="project" aria-current="false">
+            <span class="index">04</span><span>Project Pioneer</span><span class="dot"></span>
+          </button>
+          <button class="form-index-button" type="button" data-form-index="divisional" aria-current="false">
+            <span class="index">05</span><span>Divisional Form</span><span class="dot"></span>
+          </button>
+          <button class="form-index-button" type="button" data-form-index="community" aria-current="false">
+            <span class="index">06</span><span>Community Ship</span><span class="dot"></span>
+          </button>
+          <button class="form-index-button" type="button" data-form-index="political" aria-current="false">
+            <span class="index">07</span><span>Political Arena</span><span class="dot"></span>
+          </button>
+        </nav>
+
+        <article class="form-detail" aria-live="polite">
+          <div class="detail-topline">
+            <span id="detail-number">Form 01 / Autocracy</span>
+            <span>Chapter 7</span>
+          </div>
+          <div class="detail-title-row">
+            <h2 id="detail-title">Personal Enterprise</h2>
+            <p class="detail-lead" id="detail-lead">
+              A loose, founder-centered system coordinated directly by a chief with a wide span of control.
+            </p>
+          </div>
+
+          <div class="detail-visual-grid">
+            <div class="signature">
+              <span class="signature-label">Structural signature</span>
+              <div id="detail-diagram"></div>
+            </div>
+            <div class="force-relation">
+              <span class="force-relation-label">Force relationship</span>
+              <div class="force-pair">
+                <div class="force-relation-item">
+                  <span class="symbol">↑</span>
+                  <div>
+                    <strong id="detail-dominant">Consolidation</strong>
+                    <span>The force this form gives license to.</span>
+                  </div>
+                </div>
+                <div class="force-relation-item">
+                  <span class="symbol">↔</span>
+                  <div>
+                    <strong id="detail-anchor">Efficiency</strong>
+                    <span>The counterweight that can keep the form from running away.</span>
+                  </div>
+                </div>
+              </div>
+              <p class="balance-rule" id="detail-balance">
+                A strong chief can unify action quickly; disciplined resource choices keep the enterprise from becoming purely personal.
+              </p>
+            </div>
+          </div>
+
+          <div class="detail-facts-grid">
+            <section class="detail-block">
+              <h3>Coordination engine</h3>
+              <p id="detail-coordination">Direct supervision. Most people look to one chief, while formal rules and planning systems stay thin.</p>
+            </section>
+            <section class="detail-block">
+              <h3>Power pattern</h3>
+              <p id="detail-power">Centralized around the chief; hierarchy is shallow and spans of control can be very wide.</p>
+            </section>
+            <section class="detail-block">
+              <h3>Works when</h3>
+              <p id="detail-conditions">New, small, founder-led, in crisis, or facing a simple environment where rapid focused action matters.</p>
+            </section>
+            <section class="detail-block">
+              <h3>Signature risk</h3>
+              <p id="detail-risk">The organization becomes dependent on one person; succession, overreach, and lost nuance are persistent dangers.</p>
+            </section>
+            <section class="detail-block">
+              <h3>Read it through</h3>
+              <p class="example" id="detail-examples">Start-up founder, corner diner, a new NGO, or a turnaround chief taking temporary command.</p>
+            </section>
+            <section class="detail-block">
+              <h3>Remember this</h3>
+              <p class="example" id="detail-remember">The Personal Enterprise does not merely lack structure. It resists structure because structure competes with the chief’s authority.</p>
+            </section>
+          </div>
+
+          <section class="model-mirror" aria-labelledby="model-mirror-title">
+            <div class="model-mirror-head">
+              <h3 id="model-mirror-title">Business-model mirror</h3>
+              <p>How this form usually creates, delivers, and captures value — and where that model begins to strain.</p>
+            </div>
+            <div class="model-fields">
+              <div class="model-field">
+                <span>Customer logic</span>
+                <p id="mirror-customer">Founder-led customers and personal trust</p>
+              </div>
+              <div class="model-field">
+                <span>Value logic</span>
+                <p id="mirror-value">Speed, conviction, and a distinct point of view</p>
+              </div>
+              <div class="model-field">
+                <span>Activity logic</span>
+                <p id="mirror-activity">Direct decisions, deals, and hands-on coordination</p>
+              </div>
+              <div class="model-field">
+                <span>Economic logic</span>
+                <p id="mirror-economics">Often transactional; can be founder-funded</p>
+              </div>
+              <div class="model-field">
+                <span>Boundary logic</span>
+                <p id="mirror-boundary">Mostly owned and tightly controlled</p>
+              </div>
+            </div>
+            <div class="model-tension">
+              <span>Likely model tension</span>
+              <p id="mirror-tension">Growth or recurring services expose the organization's dependence on one person.</p>
+              <button class="bridge-explore" id="mirror-explore" type="button">Explore this profile in Bridge →</button>
+            </div>
+          </section>
+        </article>
+      </div>
+    </section>
+
+    <section class="view" id="view-bridge" role="tabpanel" aria-labelledby="tab-bridge">
+      <div class="view-header">
+        <div>
+          <span class="eyebrow">Business model · Organization</span>
+          <h2>Connect the value logic<br>to the way work works.</h2>
+        </div>
+        <p>
+          A business model describes how value is created, delivered, and captured. An organization form describes how people coordinate and decide. Choose four model moves to see where those logics align, collide, or need a hybrid.
+        </p>
+      </div>
+
+      <div class="bridge-layout">
+        <div class="bridge-controls">
+          <div class="preset-block">
+            <span class="preset-label">Start from a model pattern</span>
+            <div class="preset-row">
+              <button class="preset" type="button" data-bridge-preset="unbundled" aria-pressed="false">Unbundled businesses</button>
+              <button class="preset" type="button" data-bridge-preset="long_tail" aria-pressed="false">Long Tail</button>
+              <button class="preset" type="button" data-bridge-preset="multi_sided" aria-pressed="true">Multi-sided platform</button>
+              <button class="preset" type="button" data-bridge-preset="free" aria-pressed="false">FREE / cross-subsidy</button>
+              <button class="preset" type="button" data-bridge-preset="open" aria-pressed="false">Open model</button>
+            </div>
+            <p class="bridge-preset-copy">Try a recognizable pattern, then change its logic. The result is an interpretation, not a prescription.</p>
+          </div>
+
+          <div class="bridge-live-summary" aria-live="polite">
+            <span>Live result</span>
+            <strong id="bridge-live-primary">Programmed Machine</strong>
+            <small id="bridge-live-adjacent">with Divisional Form</small>
+          </div>
+
+          <fieldset class="bridge-group">
+            <legend>Customer architecture</legend>
+            <p>Who creates the demand for this organization’s value?</p>
+            <div class="bridge-options">
+              <button class="bridge-option" type="button" data-bridge-group="customer" data-bridge-option="mass" aria-pressed="false">Mass market</button>
+              <button class="bridge-option" type="button" data-bridge-group="customer" data-bridge-option="niche" aria-pressed="false">Niche</button>
+              <button class="bridge-option" type="button" data-bridge-group="customer" data-bridge-option="segmented" aria-pressed="false">Segmented</button>
+              <button class="bridge-option" type="button" data-bridge-group="customer" data-bridge-option="diversified" aria-pressed="false">Diversified</button>
+              <button class="bridge-option" type="button" data-bridge-group="customer" data-bridge-option="multi_sided" aria-pressed="true">Multi-sided</button>
+            </div>
+          </fieldset>
+
+          <fieldset class="bridge-group">
+            <legend>Value and activity signature</legend>
+            <p>What must the organization actually be excellent at?</p>
+            <div class="bridge-options">
+              <button class="bridge-option" type="button" data-bridge-group="value" data-bridge-option="price_reliability" aria-pressed="false">Price and reliability</button>
+              <button class="bridge-option" type="button" data-bridge-group="value" data-bridge-option="expertise" aria-pressed="false">Expertise</button>
+              <button class="bridge-option" type="button" data-bridge-group="value" data-bridge-option="novelty" aria-pressed="false">Novelty</button>
+              <button class="bridge-option" type="button" data-bridge-group="value" data-bridge-option="access_network" aria-pressed="true">Access and network</button>
+              <button class="bridge-option" type="button" data-bridge-group="value" data-bridge-option="identity_community" aria-pressed="false">Identity and community</button>
+            </div>
+          </fieldset>
+
+          <fieldset class="bridge-group">
+            <legend>Economic bargain</legend>
+            <p>How does value turn into resources, and who carries the risk?</p>
+            <div class="bridge-options">
+              <button class="bridge-option" type="button" data-bridge-group="economics" data-bridge-option="transaction" aria-pressed="false">One-time transaction</button>
+              <button class="bridge-option" type="button" data-bridge-group="economics" data-bridge-option="recurring" aria-pressed="false">Recurring service</button>
+              <button class="bridge-option" type="button" data-bridge-group="economics" data-bridge-option="free_subsidy" aria-pressed="true">Cross-subsidy / FREE</button>
+              <button class="bridge-option" type="button" data-bridge-group="economics" data-bridge-option="outcome_sharing" aria-pressed="false">Outcome and risk sharing</button>
+              <button class="bridge-option" type="button" data-bridge-group="economics" data-bridge-option="membership_mission" aria-pressed="false">Membership / mission</button>
+            </div>
+          </fieldset>
+
+          <fieldset class="bridge-group">
+            <legend>Boundary logic</legend>
+            <p>What must remain inside, and what should connect through a wider network?</p>
+            <div class="bridge-options">
+              <button class="bridge-option" type="button" data-bridge-group="boundary" data-bridge-option="owned" aria-pressed="false">Fully owned</button>
+              <button class="bridge-option" type="button" data-bridge-group="boundary" data-bridge-option="mixed" aria-pressed="false">Mixed</button>
+              <button class="bridge-option" type="button" data-bridge-group="boundary" data-bridge-option="networked" aria-pressed="false">Outsourced / networked</button>
+              <button class="bridge-option" type="button" data-bridge-group="boundary" data-bridge-option="open" aria-pressed="true">Open ecosystem</button>
+            </div>
+          </fieldset>
+
+          <button class="bridge-reset" id="bridge-reset" type="button">Reset to multi-sided platform</button>
+        </div>
+
+        <aside class="bridge-result">
+          <span class="sr-only" id="bridge-announcement" aria-live="polite"></span>
+          <div class="bridge-result-head">
+            <span class="bridge-night-eyebrow">Business model → organization</span>
+            <h2 id="bridge-primary">Programmed Machine</h2>
+            <span class="bridge-fit-state" id="bridge-fit-state">Hybrid opportunity</span>
+            <p class="bridge-fit-summary" id="bridge-fit-summary">The model needs a stable platform core while several interdependent sides follow different economic needs.</p>
+            <div class="bridge-result-meta">
+              <div class="bridge-meta-item">
+                <span>Adjacent form</span>
+                <strong id="bridge-adjacent">Divisional Form</strong>
+              </div>
+              <div class="bridge-meta-item">
+                <span>Dominant force</span>
+                <strong id="bridge-dominant">Efficiency</strong>
+              </div>
+              <div class="bridge-meta-item">
+                <span>Suggested anchor</span>
+                <strong id="bridge-anchor">Collaboration</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="bridge-diagram" id="bridge-diagram"></div>
+
+          <div class="bridge-links">
+            <span class="bridge-section-label">Model-to-organization links</span>
+            <dl class="bridge-link-list">
+              <div class="bridge-link-row">
+                <dt>Customers</dt>
+                <dd><strong id="bridge-link-customer-label">Multi-sided</strong><span id="bridge-link-customer">Coordinate interdependent groups and manage cross-side subsidies explicitly.</span></dd>
+              </div>
+              <div class="bridge-link-row">
+                <dt>Value / work</dt>
+                <dd><strong id="bridge-link-value-label">Access and network</strong><span id="bridge-link-value">Favor platform coordination, partner governance, and network effects.</span></dd>
+              </div>
+              <div class="bridge-link-row">
+                <dt>Economics</dt>
+                <dd><strong id="bridge-link-economics-label">Cross-subsidy / FREE</strong><span id="bridge-link-economics">Make subsidy flows visible so one side does not quietly exhaust another.</span></dd>
+              </div>
+              <div class="bridge-link-row">
+                <dt>Boundary</dt>
+                <dd><strong id="bridge-link-boundary-label">Open ecosystem</strong><span id="bridge-link-boundary">Protect governance, identity, and contribution rules while keeping the boundary porous.</span></dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="bridge-tensions">
+            <span class="bridge-section-label">What strains</span>
+            <div class="bridge-tension-list" id="bridge-tension-list"></div>
+          </div>
+
+          <div class="bridge-experiment">
+            <span class="bridge-section-label">One useful experiment</span>
+            <p id="bridge-experiment">Separate platform stewardship from the commercial interests of any single side.</p>
+          </div>
+
+          <div class="bridge-whatif">
+            <span class="bridge-night-eyebrow">What if…</span>
+            <p id="bridge-whatif-text">What if the subsidized side began paying?</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="view" id="view-canvas" role="tabpanel" aria-labelledby="tab-canvas" hidden>
+      <div class="view-header">
+        <div>
+          <span class="eyebrow">Business Model Canvas</span>
+          <h2>Nine blocks.<br>One living system.</h2>
+        </div>
+        <p>
+          A business model describes how value is created, delivered, and captured. The Canvas is useful only when its blocks are read together: change one assumption and the others respond.
+        </p>
+      </div>
+
+      <div class="canvas-learning-layout">
+        <div>
+          <div class="canvas-zones" aria-label="Canvas perspectives">
+            <div class="canvas-zone" data-canvas-zone="customer">Customer</div>
+            <div class="canvas-zone" data-canvas-zone="offer">Offer</div>
+            <div class="canvas-zone" data-canvas-zone="infrastructure">Infrastructure</div>
+            <div class="canvas-zone" data-canvas-zone="financial">Financial viability</div>
+          </div>
+
+          <div class="bmc-board" aria-label="Nine Business Model Canvas building blocks">
+            <button class="bmc-block block-partners" type="button" data-canvas-block="partners">
+              <span>KP · Infrastructure</span>
+              <strong>Key partners</strong>
+            </button>
+            <button class="bmc-block block-activities" type="button" data-canvas-block="activities">
+              <span>KA · Infrastructure</span>
+              <strong>Key activities</strong>
+            </button>
+            <button class="bmc-block block-resources" type="button" data-canvas-block="resources">
+              <span>KR · Infrastructure</span>
+              <strong>Key resources</strong>
+            </button>
+            <button class="bmc-block block-value" type="button" data-canvas-block="value" aria-pressed="true">
+              <span>VP · Offer</span>
+              <strong>Value propositions</strong>
+            </button>
+            <button class="bmc-block block-relationships" type="button" data-canvas-block="relationships">
+              <span>CR · Customer</span>
+              <strong>Customer relationships</strong>
+            </button>
+            <button class="bmc-block block-channels" type="button" data-canvas-block="channels">
+              <span>CH · Customer</span>
+              <strong>Channels</strong>
+            </button>
+            <button class="bmc-block block-segments" type="button" data-canvas-block="segments">
+              <span>CS · Customer</span>
+              <strong>Customer segments</strong>
+            </button>
+            <button class="bmc-block block-cost" type="button" data-canvas-block="cost">
+              <span>C$ · Financial</span>
+              <strong>Cost structure</strong>
+            </button>
+            <button class="bmc-block block-revenue" type="button" data-canvas-block="revenue">
+              <span>R$ · Financial</span>
+              <strong>Revenue streams</strong>
+            </button>
+          </div>
+        </div>
+
+        <aside class="canvas-inspector" aria-live="polite">
+          <div class="canvas-inspector-head">
+            <span class="bridge-night-eyebrow" id="canvas-zone-label">Offer · Block 02</span>
+            <h2 id="canvas-title">Value propositions</h2>
+          </div>
+          <div class="canvas-inspector-body">
+            <h3>The block</h3>
+            <p id="canvas-definition">The bundle of products and services that creates value for a specific customer segment.</p>
+            <p class="canvas-question" id="canvas-question">Which customer problem are we solving—and why would this offer be chosen over an alternative?</p>
+            <div class="canvas-org-lens">
+              <strong>Organization lens</strong>
+              <p id="canvas-org-lens">Novel or customized value often pulls work toward Project Pioneers; stable professional judgment can point toward a Professional Assembly.</p>
+            </div>
+            <p id="canvas-warning">A value proposition that sounds distinctive may still rely on an operating model the organization cannot support.</p>
+          </div>
+        </aside>
+      </div>
+
+      <div class="field-note">
+        <strong>Read the system</strong>
+        <p>The Canvas is not nine independent checklists. A change in customer segment, value proposition, revenue logic, or key activity can make a different organization form more coherent.</p>
+      </div>
+    </section>
+
+    <section class="view" id="view-patterns" role="tabpanel" aria-labelledby="tab-patterns" hidden>
+      <div class="view-header">
+        <div>
+          <span class="eyebrow">Business-model patterns</span>
+          <h2>Patterns are systems,<br>not templates.</h2>
+        </div>
+        <p>
+          The book’s patterns show recurring ways to solve a business-model challenge. Each changes the economics, the boundary of the firm, and the organization required to make it work.
+        </p>
+      </div>
+
+      <div class="pattern-library">
+        <nav class="pattern-index" aria-label="Business-model patterns">
+          <button class="pattern-index-button" type="button" data-pattern="unbundled" aria-current="true">
+            <span>01</span><strong>Unbundled businesses</strong>
+          </button>
+          <button class="pattern-index-button" type="button" data-pattern="long_tail" aria-current="false">
+            <span>02</span><strong>Long Tail</strong>
+          </button>
+          <button class="pattern-index-button" type="button" data-pattern="multi_sided" aria-current="false">
+            <span>03</span><strong>Multi-sided platform</strong>
+          </button>
+          <button class="pattern-index-button" type="button" data-pattern="free" aria-current="false">
+            <span>04</span><strong>FREE / cross-subsidy</strong>
+          </button>
+          <button class="pattern-index-button" type="button" data-pattern="open" aria-current="false">
+            <span>05</span><strong>Open model</strong>
+          </button>
+        </nav>
+
+        <article class="pattern-detail" aria-live="polite">
+          <div class="pattern-detail-head">
+            <div>
+              <span class="eyebrow" id="pattern-number">Pattern 01</span>
+              <h2 id="pattern-title">Unbundled businesses</h2>
+            </div>
+            <p id="pattern-summary">Relationship, innovation, and infrastructure work can conflict when they share one operating logic.</p>
+          </div>
+          <div class="pattern-story">
+            <section>
+              <h3>Before</h3>
+              <p id="pattern-context">One company combines customer relationships, product innovation, and infrastructure under one roof.</p>
+            </section>
+            <section>
+              <h3>Challenge</h3>
+              <p id="pattern-challenge">Different economics and cultures create trade-offs, slower decisions, and diluted focus.</p>
+            </section>
+            <section>
+              <h3>Pattern move</h3>
+              <p id="pattern-solution">Separate or protect the three business logics while coordinating their shared dependencies.</p>
+            </section>
+          </div>
+          <div class="pattern-org-lens">
+            <div>
+              <h3>Organization lens</h3>
+              <p id="pattern-org-lens">Often a Divisional Form or assembled hybrid: relationship units, project units, and a shared infrastructure platform.</p>
+            </div>
+            <button class="pattern-action" id="pattern-bridge-action" type="button">Test this pattern in Bridge →</button>
+          </div>
+          <p class="pattern-example"><strong>Book examples:</strong> <span id="pattern-examples">Private banking and mobile telecommunications.</span></p>
+        </article>
+      </div>
+    </section>
+
+    <section class="view" id="view-design" role="tabpanel" aria-labelledby="tab-design" hidden>
+      <div class="view-header">
+        <div>
+          <span class="eyebrow">Model design</span>
+          <h2>Make the model visible.<br>Then test the logic.</h2>
+        </div>
+        <p>
+          Business-model innovation can start from resources, an offer, customers, or economics. The Canvas becomes useful when teams use it to surface assumptions, compare alternatives, and prototype organizational consequences.
+        </p>
+      </div>
+
+      <div class="design-studio">
+        <nav class="design-epicenters" aria-label="Business-model innovation starting points">
+          <button class="design-epicenter" type="button" data-design-epicenter="resource" aria-pressed="false">
+            <span>01</span><strong>Resource-driven</strong>
+          </button>
+          <button class="design-epicenter" type="button" data-design-epicenter="offer" aria-pressed="false">
+            <span>02</span><strong>Offer-driven</strong>
+          </button>
+          <button class="design-epicenter" type="button" data-design-epicenter="customer" aria-pressed="true">
+            <span>03</span><strong>Customer-driven</strong>
+          </button>
+          <button class="design-epicenter" type="button" data-design-epicenter="finance" aria-pressed="false">
+            <span>04</span><strong>Finance-driven</strong>
+          </button>
+        </nav>
+
+        <article class="design-detail" aria-live="polite">
+          <div class="design-detail-head">
+            <span class="bridge-night-eyebrow" id="design-epicenter-label">Start with the customer</span>
+            <h2 id="design-epicenter-title">Begin with an unmet job</h2>
+            <p id="design-epicenter-summary">Start with a customer need, accessibility problem, or point of friction rather than with the existing product or structure.</p>
+          </div>
+          <div class="design-detail-body">
+            <section>
+              <h3>Design move</h3>
+              <p id="design-epicenter-move">Change who is served, how access works, or what the customer is trying to get done.</p>
+            </section>
+            <section>
+              <h3>Organization consequence</h3>
+              <p id="design-epicenter-org">Niche complexity often favors professional or project logic; shared identity can point toward a Community Ship.</p>
+            </section>
+          </div>
+          <p class="design-question" id="design-epicenter-question">Which customer assumption are we treating as a fact, and how could a prototype challenge it?</p>
+        </article>
+      </div>
+
+      <div class="design-process" aria-label="Business-model design loop">
+        <div class="design-step">
+          <span>Step 01</span>
+          <h3>Assemble</h3>
+          <p>Bring different functions, seniority levels, experiences, and customer perspectives into the same conversation.</p>
+        </div>
+        <div class="design-step">
+          <span>Step 02</span>
+          <h3>Immerse</h3>
+          <p>Study customers, technologies, alternatives, and the external environment before narrowing possibilities.</p>
+        </div>
+        <div class="design-step">
+          <span>Step 03</span>
+          <h3>Expand</h3>
+          <p>Generate many options by starting from different Canvas blocks and asking deliberately awkward “what if” questions.</p>
+        </div>
+        <div class="design-step">
+          <span>Step 04</span>
+          <h3>Select</h3>
+          <p>Make criteria explicit: customer value, feasibility, risk, speed, and organizational consequences.</p>
+        </div>
+        <div class="design-step">
+          <span>Step 05</span>
+          <h3>Prototype</h3>
+          <p>Sketch complete models and test the assumptions before committing the organization to a fixed structure.</p>
+        </div>
+      </div>
+
+      <div class="design-forces" aria-label="Business-model environment">
+        <div class="design-force">
+          <h3>Market forces</h3>
+          <p>Customer needs, segments, switching costs, revenue attractiveness, and market issues.</p>
+        </div>
+        <div class="design-force">
+          <h3>Industry forces</h3>
+          <p>Competitors, new entrants, substitutes, suppliers, stakeholders, and value-chain shifts.</p>
+        </div>
+        <div class="design-force">
+          <h3>Key trends</h3>
+          <p>Technology, regulation, society, culture, and socioeconomic patterns.</p>
+        </div>
+        <div class="design-force">
+          <h3>Macro forces</h3>
+          <p>Capital markets, commodities, economic infrastructure, and the wider economy.</p>
+        </div>
+      </div>
+
+      <div class="field-note">
+        <strong>Multiple models</strong>
+        <p>An established organization can hold more than one business model. When the models conflict, the design question is whether to integrate, separate, or phase that separation—considering strategic similarity, conflict severity, risk, and the synergies that must still be protected.</p>
+      </div>
+    </section>
+
+    <section class="view" id="view-cases" role="tabpanel" aria-labelledby="tab-cases" hidden>
+      <div class="view-header">
+        <div>
+          <span class="eyebrow">Cases</span>
+          <h2>From a model pattern<br>to a real company.</h2>
+        </div>
+        <p>
+          One well-known company is selected for each pattern. Read the short passage, follow the organizational bridge, then use the official link for deeper context or reopen the pattern in Bridge.
+        </p>
+      </div>
+
+      <div class="case-ledger">
+        <article class="case-entry">
+          <div class="case-marker">
+            <span>01 · Unbundling</span>
+            <strong>IBM → Kyndryl</strong>
+            <small>Infrastructure separated from cloud, consulting, and software.</small>
+          </div>
+          <div class="case-copy">
+            <h2>Two different operating logics, allowed to separate</h2>
+            <div class="case-company">IBM and Kyndryl · 2021</div>
+            <p class="case-passage">
+              IBM completed the spin-off of its managed infrastructure services business as Kyndryl. Kyndryl could focus on operating outsourced infrastructure at scale, while IBM positioned its remaining portfolio around hybrid cloud, software, and consulting. The separation made two different economic logics easier to manage independently.
+            </p>
+            <p class="case-bridge">
+              <strong>Bridge logic:</strong> infrastructure resembles a Programmed core, while advisory and innovation work need Professional or Project freedom. The new company boundary becomes part of the organization design, and partnerships must recreate the coordination lost through separation.
+            </p>
+            <div class="case-actions">
+              <a class="case-link" href="https://www.ibm.com/annualreport/2021/" target="_blank" rel="noopener noreferrer">Read IBM’s official case source ↗</a>
+              <button class="case-bridge-action" type="button" data-case-bridge="unbundled">Open this pattern in Bridge →</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="case-entry">
+          <div class="case-marker">
+            <span>02 · Long Tail</span>
+            <strong>Amazon</strong>
+            <small>A vast platform aggregates many small and niche offers.</small>
+          </div>
+          <div class="case-copy">
+            <h2>One platform, an enormous catalog of niches</h2>
+            <div class="case-company">Amazon Marketplace · Global</div>
+            <p class="case-passage">
+              Amazon Marketplace connects buyers with millions of independent sellers, whose products range from mainstream items to highly specific niches. Individual niche products may sell only occasionally, but together they create a vast assortment that can be discovered through Amazon’s search, reviews, payments, advertising, and logistics infrastructure.
+            </p>
+            <p class="case-bridge">
+              <strong>Bridge logic:</strong> a Programmed platform core provides scale and repeatable rules, while independent sellers create Long Tail variety outside that core. The design tension is preserving niche diversity without letting standardized marketplace controls force every seller into the same model.
+            </p>
+            <div class="case-actions">
+              <a class="case-link" href="https://www.aboutamazon.com/what-we-do" target="_blank" rel="noopener noreferrer">Read Amazon’s official case source ↗</a>
+              <button class="case-bridge-action" type="button" data-case-bridge="long_tail">Open this pattern in Bridge →</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="case-entry">
+          <div class="case-marker">
+            <span>03 · Multi-sided platform</span>
+            <strong>Apple App Store</strong>
+            <small>Users and developers create value through one governed platform.</small>
+          </div>
+          <div class="case-copy">
+            <h2>A central platform orchestrates a vast developer network</h2>
+            <div class="case-company">Apple App Store · Global</div>
+            <p class="case-passage">
+              The App Store connects people seeking software with developers who create it. Apple governs distribution, review, discovery, payments, and commercial terms, while developers supply much of the product variety and innovation. More useful applications can attract more users, which in turn makes the platform more valuable to developers.
+            </p>
+            <p class="case-bridge">
+              <strong>Bridge logic:</strong> Apple’s platform stewardship is centrally coordinated, but the ecosystem is distributed. This is a hybrid of a controlled machine-like platform and a project-like developer network. The central tension is how much rule-setting and value capture can coexist with ecosystem autonomy.
+            </p>
+            <div class="case-actions">
+              <a class="case-link" href="https://developer.apple.com/app-store/" target="_blank" rel="noopener noreferrer">Read Apple’s official platform source ↗</a>
+              <button class="case-bridge-action" type="button" data-case-bridge="multi_sided">Open this pattern in Bridge →</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="case-entry">
+          <div class="case-marker">
+            <span>04 · FREE</span>
+            <strong>Google Search</strong>
+            <small>Free consumer access is funded by another side of the model.</small>
+          </div>
+          <div class="case-copy">
+            <h2>Users search for free; advertisers fund the system</h2>
+            <div class="case-company">Google · Global</div>
+            <p class="case-passage">
+              Google Search is available to users without a direct charge. Advertising creates the main cross-subsidy: businesses pay to reach search users through paid results and other advertising formats. The enormous user base, detailed intent signals, and machine-scale infrastructure make the advertising side valuable enough to sustain the free service.
+            </p>
+            <p class="case-bridge">
+              <strong>Bridge logic:</strong> the free side grows through scale and automated service, while the paying side requires measurement, sales, and optimization. The organizational risk is letting advertising metrics dominate decisions in ways that weaken user trust or product quality.
+            </p>
+            <div class="case-actions">
+              <a class="case-link" href="https://about.google/" target="_blank" rel="noopener noreferrer">Read Google’s official company source ↗</a>
+              <button class="case-bridge-action" type="button" data-case-bridge="free">Open this pattern in Bridge →</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="case-entry">
+          <div class="case-marker">
+            <span>05 · Open model</span>
+            <strong>P&amp;G Connect + Develop</strong>
+            <small>Internal capability meets a global network of external innovators.</small>
+          </div>
+          <div class="case-copy">
+            <h2>Open innovation turns the company boundary into a resource</h2>
+            <div class="case-company">Procter &amp; Gamble · Global</div>
+            <p class="case-passage">
+              P&amp;G’s Connect + Develop program invites outside innovators, suppliers, universities, and individuals to help solve product and technology challenges. P&amp;G brings customer insight, brands, testing, manufacturing, and distribution to the collaboration, while external partners contribute ideas and specialist knowledge that may not exist inside the company.
+            </p>
+            <p class="case-bridge">
+              <strong>Bridge logic:</strong> open value creation behaves more like a Project network and community than a closed hierarchy. The organization still needs strong gateways, intellectual-property rules, internal champions, and governance so that external ideas can move into commercialization without losing quality or control.
+            </p>
+            <div class="case-actions">
+              <a class="case-link" href="https://www.pgconnectdevelop.com/" target="_blank" rel="noopener noreferrer">Read P&amp;G’s official program page ↗</a>
+              <button class="case-bridge-action" type="button" data-case-bridge="open">Open this pattern in Bridge →</button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <p class="case-source-note">
+        These are concise interpretive cases, not affiliated endorsements. Official links open in a new tab for further reading.
+      </p>
+    </section>
+
+    <section class="view" id="view-forces" role="tabpanel" aria-labelledby="tab-forces" hidden>
+      <div class="view-header">
+        <div>
+          <span class="eyebrow">Force studio</span>
+          <h2>Design is a balancing act.</h2>
+        </div>
+        <p>
+          Raise the forces you feel at work. The studio names the form they currently favor, then suggests the counterweight the book uses to keep that force productive.
+        </p>
+      </div>
+
+      <div class="lab-layout">
+        <div>
+          <div class="preset-block">
+            <span class="preset-label">Start from a design moment</span>
+            <div class="preset-row">
+              <button class="preset" type="button" data-preset="founding" aria-pressed="true">Founding</button>
+              <button class="preset" type="button" data-preset="scaling" aria-pressed="false">Scaling</button>
+              <button class="preset" type="button" data-preset="expertise" aria-pressed="false">Expertise</button>
+              <button class="preset" type="button" data-preset="innovation" aria-pressed="false">Innovation</button>
+              <button class="preset" type="button" data-preset="diversify" aria-pressed="false">Diversifying</button>
+              <button class="preset" type="button" data-preset="mission" aria-pressed="false">Mission</button>
+              <button class="preset" type="button" data-preset="conflict" aria-pressed="false">Conflict</button>
+              <button class="preset" type="button" data-preset="balanced" aria-pressed="false">Balanced</button>
+            </div>
+          </div>
+
+          <div class="mobile-lab-summary" aria-live="polite">
+            <span>Current posture</span>
+            <strong id="mobile-lab-title">Personal Enterprise</strong>
+            <small id="mobile-lab-anchor">Anchor with efficiency</small>
+          </div>
+
+          <div class="sliders-grid">
+            <div class="force-control" data-force-control="consolidation">
+              <div class="force-control-head">
+                <label for="force-consolidation">Consolidation</label>
+                <output class="force-value" id="value-consolidation" for="force-consolidation">88</output>
+              </div>
+              <p>Pull many efforts into one direction.</p>
+              <input id="force-consolidation" type="range" min="0" max="100" value="88" data-force-slider="consolidation">
+            </div>
+            <div class="force-control" data-force-control="efficiency">
+              <div class="force-control-head">
+                <label for="force-efficiency">Efficiency</label>
+                <output class="force-value" id="value-efficiency" for="force-efficiency">32</output>
+              </div>
+              <p>Get more output from fewer resources.</p>
+              <input id="force-efficiency" type="range" min="0" max="100" value="32" data-force-slider="efficiency">
+            </div>
+            <div class="force-control" data-force-control="proficiency">
+              <div class="force-control-head">
+                <label for="force-proficiency">Proficiency</label>
+                <output class="force-value" id="value-proficiency" for="force-proficiency">22</output>
+              </div>
+              <p>Protect expert skill and quality of judgment.</p>
+              <input id="force-proficiency" type="range" min="0" max="100" value="22" data-force-slider="proficiency">
+            </div>
+            <div class="force-control" data-force-control="collaboration">
+              <div class="force-control-head">
+                <label for="force-collaboration">Collaboration</label>
+                <output class="force-value" id="value-collaboration" for="force-collaboration">44</output>
+              </div>
+              <p>Coordinate experts through mutual adjustment.</p>
+              <input id="force-collaboration" type="range" min="0" max="100" value="44" data-force-slider="collaboration">
+            </div>
+            <div class="force-control" data-force-control="separation">
+              <div class="force-control-head">
+                <label for="force-separation">Separation</label>
+                <output class="force-value" id="value-separation" for="force-separation">18</output>
+              </div>
+              <p>Give units autonomy while holding them to results.</p>
+              <input id="force-separation" type="range" min="0" max="100" value="18" data-force-slider="separation">
+            </div>
+            <div class="force-control" data-force-control="culture">
+              <div class="force-control-head">
+                <label for="force-culture">Culture</label>
+                <output class="force-value" id="value-culture" for="force-culture">62</output>
+              </div>
+              <p>Bind people through shared norms and identity.</p>
+              <input id="force-culture" type="range" min="0" max="100" value="62" data-force-slider="culture">
+            </div>
+            <div class="force-control" data-force-control="conflict">
+              <div class="force-control-head">
+                <label for="force-conflict">Conflict</label>
+                <output class="force-value" id="value-conflict" for="force-conflict">18</output>
+              </div>
+              <p>Contest power, priorities, and direction.</p>
+              <input id="force-conflict" type="range" min="0" max="100" value="18" data-force-slider="conflict">
+            </div>
+          </div>
+
+          <p class="lab-caveat">
+            This is a thinking aid, not a validated diagnostic. The book treats forms and forces as simplifications. Use the result to ask better questions, especially about age, size, technical system, environment, power, and history.
+          </p>
+        </div>
+
+        <aside class="lab-result" aria-live="polite">
+          <div class="lab-result-body">
+            <span class="eyebrow">Current posture</span>
+            <h3 id="lab-title">Personal Enterprise</h3>
+            <p class="lab-summary" id="lab-summary">
+              The field currently leans toward consolidation: one center able to unify action quickly.
+            </p>
+            <div class="lab-diagram" id="lab-diagram"></div>
+            <div class="lab-meta">
+              <div>
+                <span>Dominant force</span>
+                <strong id="lab-dominant">Consolidation</strong>
+              </div>
+              <div>
+                <span>Suggested anchor</span>
+                <strong id="lab-anchor">Efficiency</strong>
+              </div>
+            </div>
+          </div>
+          <div class="lab-anchor" id="lab-anchor-copy">
+            <strong>Containment</strong><br>
+            Give the chief a clear resource constraint. Efficiency disciplines personal power without silencing it.
+          </div>
+          <div class="lab-result-body">
+            <button class="lab-reset" id="lab-reset" type="button">Reset to founding profile</button>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="view" id="view-transitions" role="tabpanel" aria-labelledby="tab-transitions" hidden>
+      <div class="view-header">
+        <div>
+          <span class="eyebrow">Transitions</span>
+          <h2>Organizations do not stand still.</h2>
+        </div>
+        <p>
+          A form is a tendency, not a destiny. Age, success, crisis, external control, and political pressure can move an organization toward another form or hybrid.
+        </p>
+      </div>
+
+      <div class="timeline" role="group" aria-label="Organizational life cycle stages">
+        <button class="stage-button" type="button" data-stage="birth" aria-pressed="true">
+          <span>01 · birth</span><strong>Personal start</strong>
+        </button>
+        <button class="stage-button" type="button" data-stage="youth" aria-pressed="false">
+          <span>02 · youth</span><strong>Founder remains</strong>
+        </button>
+        <button class="stage-button" type="button" data-stage="maturity" aria-pressed="false">
+          <span>03 · maturity</span><strong>Natural fit settles</strong>
+        </button>
+        <button class="stage-button" type="button" data-stage="midlife" aria-pressed="false">
+          <span>04 · midlife</span><strong>Impromptu change</strong>
+        </button>
+        <button class="stage-button" type="button" data-stage="renewal" aria-pressed="false">
+          <span>05 · renewal</span><strong>Adapt or restructure</strong>
+        </button>
+        <button class="stage-button" type="button" data-stage="demise" aria-pressed="false">
+          <span>06 · ending</span><strong>Natural or political</strong>
+        </button>
+      </div>
+
+      <div class="transition-panel" aria-live="polite">
+        <div class="transition-summary">
+          <span id="stage-number">Stage 01 / Birth</span>
+          <h3 id="stage-title">The personal beginning</h3>
+          <p id="stage-summary">New organizations usually turn toward a founding chief because resources, people, facilities, and culture all have to be assembled from scratch.</p>
+          <div class="stage-forms" id="stage-forms">
+            <span>Personal Enterprise</span>
+            <span>Direct supervision</span>
+          </div>
+        </div>
+        <div class="transition-reading">
+          <h4>What is happening</h4>
+          <p id="stage-reading">Direct supervision is the most natural first coordinating mechanism. Mutual adjustment is limited until people know one another, and standards take time to establish.</p>
+          <p class="warning" id="stage-warning">The design question: how does the founder create enough structure for others to act without turning the enterprise into a cult of personality?</p>
+        </div>
+      </div>
+
+      <div class="route-section">
+        <div class="route-head">
+          <div>
+            <span class="eyebrow">Common pathways</span>
+            <h2>Transitions are conditional.</h2>
+          </div>
+          <p>
+            The life cycle is a set of leading tendencies, not a sequence every organization must follow. Select a pathway to see the condition that makes it plausible and the tradeoff it introduces.
+          </p>
+        </div>
+
+        <div class="routes-layout">
+          <div class="route-list" aria-label="Common organization transitions">
+            <button class="route-button" type="button" data-route="personal-machine" aria-pressed="true">
+              <strong>Personal Enterprise</strong><span class="arrow">→</span><strong>Programmed Machine</strong><small>Mass production / service</small>
+            </button>
+            <button class="route-button" type="button" data-route="personal-professional" aria-pressed="false">
+              <strong>Personal Enterprise</strong><span class="arrow">→</span><strong>Professional Assembly</strong><small>Expert work arrives</small>
+            </button>
+            <button class="route-button" type="button" data-route="personal-project" aria-pressed="false">
+              <strong>Personal Enterprise</strong><span class="arrow">→</span><strong>Project Pioneer</strong><small>Collaborative novelty</small>
+            </button>
+            <button class="route-button" type="button" data-route="project-professional" aria-pressed="false">
+              <strong>Project Pioneer</strong><span class="arrow">→</span><strong>Professional Assembly</strong><small>Skills settle with age</small>
+            </button>
+            <button class="route-button" type="button" data-route="growth-divisional" aria-pressed="false">
+              <strong>Growth</strong><span class="arrow">→</span><strong>Divisional Form</strong><small>Diversification</small>
+            </button>
+            <button class="route-button" type="button" data-route="stagnation-turnaround" aria-pressed="false">
+              <strong>Stagnation</strong><span class="arrow">→</span><strong>Personal turnaround</strong><small>Concentrate power</small>
+            </button>
+            <button class="route-button" type="button" data-route="stagnation-project" aria-pressed="false">
+              <strong>Stagnation</strong><span class="arrow">→</span><strong>Project overlay</strong><small>Open collaboration</small>
+            </button>
+            <button class="route-button" type="button" data-route="resistance-political" aria-pressed="false">
+              <strong>Blocked renewal</strong><span class="arrow">→</span><strong>Political Arena</strong><small>Contest entrenched power</small>
+            </button>
+          </div>
+
+          <aside class="route-detail" aria-live="polite">
+            <span>Most common pathway</span>
+            <h3 id="route-title">Founder-led to machine-like</h3>
+            <p id="route-summary">
+              If the business matures into mass production or mass service, professional management can replace the founder and formalize work and outputs. The transition can be relatively smooth.
+            </p>
+            <p class="condition" id="route-condition">What makes it fit: stable, repetitive operating work and a need for coordination at scale.</p>
+          </aside>
+        </div>
+      </div>
+
+      <div class="closing-note">
+        <blockquote>Seek simplicity and distrust it.</blockquote>
+        <p>
+          Start with a useful form. Then look for the counterforce, the cross-cutting team, the protected pocket of difference, and the pathway people actually walk. That is where a living organization appears.
+        </p>
+      </div>
+
+      <footer>
+        <div>
+          <strong>Source and scope</strong><br>
+          An interpretive, interactive overview of Henry Mintzberg, <em>Understanding Organizations...Finally!: Structure in Sevens</em> (Berrett-Koehler, 2023). The interface condenses chapters 2-21; it does not reproduce the book or substitute for it.
+          <p class="source-addition">The business-model bridge is informed by Alexander Osterwalder and Yves Pigneur, Business Model Generation (Wiley, 2010).</p>
+        </div>
+        <div>
+          <strong>Business × Organization Atlas</strong><br>
+          Nine model blocks, seven organization forms, and one shared design question: how should value logic meet coordination logic?
+        </div>
+        <details class="font-license">
+          <summary>Typography and font licenses</summary>
+          <p>
+            This guide uses Inter, Noto Sans SC, Noto Sans JP, and Noto Sans KR. The fonts are embedded as local glyph subsets and are licensed for public use under the SIL Open Font License 1.1.
+          </p>
+          <p>
+            <a href="https://openfontlicense.org/" target="_blank" rel="noopener noreferrer">Read the SIL OFL 1.1</a>
+            ·
+            <a href="assets/fonts/FONT-LICENSES.txt">View copyright notices and the full local license</a>
+          </p>
+          <pre class="font-license-full" tabindex="0">Inter
+Copyright 2020 The Inter Project Authors (https://github.com/rsms/inter)
+
+Noto Sans SC / Noto Sans JP / Noto Sans KR
+Copyright 2014-2021 Adobe (http://www.adobe.com/), with Reserved Font Name "Source".
+
+SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
+
+PREAMBLE
+The goals of the Open Font License (OFL) are to stimulate worldwide
+development of collaborative font projects, to support the font creation
+efforts of academic and linguistic communities, and to provide a free and
+open framework in which fonts may be shared and improved in partnership
+with others.
+
+The OFL allows the licensed fonts to be used, studied, modified and
+redistributed freely as long as they are not sold by themselves. The
+fonts, including any derivative works, can be bundled, embedded,
+redistributed and/or sold with any software provided that any reserved
+names are not used by derivative works. The fonts and derivatives,
+however, cannot be released under any other type of license. The
+requirement for fonts to remain under this license does not apply
+to any document created using the fonts or their derivatives.
+
+DEFINITIONS
+"Font Software" refers to the set of files released by the Copyright
+Holder(s) under this license and clearly marked as such. This may
+include source files, build scripts and documentation.
+
+"Reserved Font Name" refers to any names specified as such after the
+copyright statement(s).
+
+"Original Version" refers to the collection of Font Software components as
+distributed by the Copyright Holder(s).
+
+"Modified Version" refers to any derivative made by adding to, deleting,
+or substituting -- in part or in whole -- any of the components of the
+Original Version, by changing formats or by porting the Font Software to a
+new environment.
+
+"Author" refers to any designer, engineer, programmer, technical
+writer or other person who contributed to the Font Software.
+
+PERMISSION &amp; CONDITIONS
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of the Font Software, to use, study, copy, merge, embed, modify,
+redistribute, and sell modified and unmodified copies of the Font
+Software, subject to the following conditions:
+
+1) Neither the Font Software nor any of its individual components,
+in Original or Modified Versions, may be sold by itself.
+
+2) Original or Modified Versions of the Font Software may be bundled,
+redistributed and/or sold with any software, provided that each copy
+contains the above copyright notice and this license. These can be
+included either as stand-alone text files, human-readable headers or
+in the appropriate machine-readable metadata fields within text or
+binary files as long as those fields can be easily viewed by the user.
+
+3) No Modified Version of the Font Software may use the Reserved Font
+Name(s) unless explicit written permission is granted by the corresponding
+Copyright Holder. This restriction only applies to the primary font name as
+presented to the users.
+
+4) The name(s) of the Copyright Holder(s) or the Author(s) of the Font
+Software shall not be used to promote, endorse or advertise any
+Modified Version, except to acknowledge the contribution(s) of the
+Copyright Holder(s) and the Author(s) or with their explicit written
+permission.
+
+5) The Font Software, modified or unmodified, in part or in whole,
+must be distributed entirely under this license, and must not be
+distributed under any other license. The requirement for fonts to
+remain under this license does not apply to any document created
+using the Font Software.
+
+TERMINATION
+This license becomes null and void if any of the above conditions are
+not met.
+
+DISCLAIMER
+THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
+OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
+DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
+OTHER DEALINGS IN THE FONT SOFTWARE.</pre>
+        </details>
+      </footer>
+    </section>
+
+    <section class="view" id="view-about" role="tabpanel" aria-labelledby="tab-about" hidden>
+      <div class="view-header about-lead">
+        <div>
+          <span class="eyebrow">About this atlas</span>
+          <h2>Two lenses.<br>One design conversation.</h2>
+        </div>
+        <p>
+          This interactive atlas connects business-model thinking with organization design. It helps you make assumptions visible, compare alternative logics, and ask better questions about how value creation should be coordinated.
+        </p>
+      </div>
+
+      <div class="about-quickstart" aria-label="How to use this atlas">
+        <section class="about-step">
+          <span>01</span>
+          <h3>Choose a lens</h3>
+          <p>Start in Bridge for the central connection, or use Canvas and Patterns to learn the ideas behind each model move.</p>
+        </section>
+        <section class="about-step">
+          <span>02</span>
+          <h3>Change an assumption</h3>
+          <p>Select a pattern, Canvas block, organization form, or force. The interpretation updates immediately in your browser.</p>
+        </section>
+        <section class="about-step">
+          <span>03</span>
+          <h3>Read the tension</h3>
+          <p>Useful results identify a likely form, an adjacent form, and the friction that still needs a design response.</p>
+        </section>
+      </div>
+
+      <div class="about-layout">
+        <section class="about-section" aria-labelledby="about-pages-title">
+          <h2 id="about-pages-title">Choose by task</h2>
+          <div class="about-page-grid">
+            <button class="about-page-link" type="button" data-about-target="bridge">
+              <span>01 · Bridge</span>
+              <strong>Connect a model to a form</strong>
+              <p>Choose four model moves or a preset and read the primary form, adjacent form, tension, experiment, and what-if prompt.</p>
+            </button>
+            <button class="about-page-link" type="button" data-about-target="canvas">
+              <span>02 · Canvas</span>
+              <strong>Learn the nine blocks</strong>
+              <p>Select each block to see its guiding question, definition, organizational implication, and common warning.</p>
+            </button>
+            <button class="about-page-link" type="button" data-about-target="patterns">
+              <span>03 · Patterns</span>
+              <strong>Study recurring model moves</strong>
+              <p>Explore Unbundling, Long Tail, Multi-sided Platforms, FREE, and Open Models through context, challenge, and response.</p>
+            </button>
+            <button class="about-page-link" type="button" data-about-target="design">
+              <span>04 · Design</span>
+              <strong>Start from a different place</strong>
+              <p>Begin from resources, an offer, customers, or finance, then use the design loop and environmental forces to test the idea.</p>
+            </button>
+            <button class="about-page-link" type="button" data-about-target="cases">
+              <span>05 · Cases</span>
+              <strong>See the logic in famous companies</strong>
+              <p>Read one selected company for each model path, follow the organizational bridge, and open an official source for further reading.</p>
+            </button>
+            <button class="about-page-link" type="button" data-about-target="atlas">
+              <span>06 · Atlas</span>
+              <strong>Map organization forms</strong>
+              <p>Select the four fundamental forms or the three additional forms to see their structure, power, and signature risk.</p>
+            </button>
+            <button class="about-page-link" type="button" data-about-target="forms">
+              <span>07 · Forms</span>
+              <strong>Inspect a form in depth</strong>
+              <p>Each form includes its coordination logic, force relationship, model mirror, and a link back to Bridge.</p>
+            </button>
+            <button class="about-page-link" type="button" data-about-target="forces">
+              <span>08 · Forces</span>
+              <strong>Balance organizing forces</strong>
+              <p>Adjust the seven forces and compare the dominant form with the counterweight that can keep it productive.</p>
+            </button>
+            <button class="about-page-link" type="button" data-about-target="transitions">
+              <span>09 · Change</span>
+              <strong>Explore how forms evolve</strong>
+              <p>Choose a life-cycle stage or a common pathway to see why organizations move toward another form or hybrid.</p>
+            </button>
+          </div>
+        </section>
+
+        <aside class="about-note">
+          <span class="bridge-night-eyebrow">Interpretation, not prediction</span>
+          <h2>No labels without evidence.</h2>
+          <p>This is a thinking tool, not a diagnostic test. Use the result as a hypothesis, then test it against the real work, incentives, power, history, and customer evidence.</p>
+          <ul>
+            <li>Start with a real model or problem, not with the label you want the organization to receive.</li>
+            <li>Compare at least two plausible forms and explain what would make each one work.</li>
+            <li>Turn the central tension into a small experiment before making a structural change.</li>
+          </ul>
+          <button class="about-cta" type="button" data-about-target="bridge">Start with Bridge →</button>
+        </aside>
+      </div>
+
+      <p class="about-local-note">
+        All selections and calculations happen locally in your browser. Your language preference is saved locally; no account, server, or external model is used.
+      </p>
+    </section>
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

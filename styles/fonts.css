@@ -1,0 +1,79 @@
+/*
+Typography is licensed under the SIL Open Font License 1.1.
+  Inter: Copyright 2020 The Inter Project Authors.
+Noto Sans SC: Copyright 2014-2021 Adobe, Reserved Font Name "Source".
+  Noto Sans JP: Copyright 2014-2021 Adobe, Reserved Font Name "Source".
+  Noto Sans KR: Copyright 2014-2021 Adobe, Reserved Font Name "Source".
+Full attribution and license: assets/fonts/FONT-LICENSES.txt
+*/
+@font-face {
+font-family: "Inter";
+font-style: normal;
+font-weight: 400 500;
+font-display: swap;
+src: url("../assets/fonts/inter.woff2") format("woff2");
+}
+
+@font-face {
+font-family: "Noto Sans SC";
+font-style: normal;
+font-weight: 400 500;
+font-display: swap;
+src: url("../assets/fonts/noto-sans-sc.woff2") format("woff2");
+}
+
+@font-face {
+font-family: "Noto Sans SC B";
+font-style: normal;
+font-weight: 400 500;
+font-display: swap;
+src: url("../assets/fonts/noto-sans-sc-b.woff2") format("woff2");
+}
+
+@font-face {
+font-family: "Noto Sans JP";
+font-style: normal;
+font-weight: 400 500;
+font-display: swap;
+src: url("../assets/fonts/noto-sans-jp.woff2") format("woff2");
+}
+
+@font-face {
+font-family: "Noto Sans JP B";
+font-style: normal;
+font-weight: 400 500;
+font-display: swap;
+src: url("../assets/fonts/noto-sans-jp-b.woff2") format("woff2");
+}
+
+@font-face {
+font-family: "Noto Sans JP C";
+font-style: normal;
+font-weight: 400 500;
+font-display: swap;
+src: url("../assets/fonts/noto-sans-jp-c.woff2") format("woff2");
+}
+
+@font-face {
+font-family: "Noto Sans JP D";
+font-style: normal;
+font-weight: 400 500;
+font-display: swap;
+src: url("../assets/fonts/noto-sans-jp-d.woff2") format("woff2");
+}
+
+@font-face {
+font-family: "Noto Sans KR";
+font-style: normal;
+font-weight: 400 500;
+font-display: swap;
+src: url("../assets/fonts/noto-sans-kr.woff2") format("woff2");
+}
+
+@font-face {
+font-family: "Noto Sans KR B";
+font-style: normal;
+font-weight: 400 500;
+font-display: swap;
+src: url("../assets/fonts/noto-sans-kr-b.woff2") format("woff2");
+}

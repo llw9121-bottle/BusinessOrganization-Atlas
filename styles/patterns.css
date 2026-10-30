@@ -1,0 +1,123 @@
+.pattern-library {
+display: grid;
+grid-template-columns: 230px minmax(0, 1fr);
+gap: clamp(1.4rem, 3vw, 3rem);
+padding-top: 2rem;
+}
+.pattern-index {
+position: sticky;
+top: 104px;
+align-self: start;
+display: grid;
+border-top: 1px solid var(--ink);
+}
+.pattern-index-button {
+display: grid;
+grid-template-columns: 24px 1fr;
+gap: 0.55rem;
+min-height: 58px;
+padding: 0.7rem 0.3rem;
+border: 0;
+border-bottom: 1px solid var(--line);
+background: transparent;
+cursor: pointer;
+text-align: left;
+font-size: 0.78rem;
+line-height: 1.2;
+}
+.pattern-index-button span {
+color: var(--muted);
+font-family: var(--mono);
+font-size: 0.56rem;
+}
+.pattern-index-button[aria-current="true"] {
+color: var(--accent-deep);
+font-weight: 500;
+}
+.pattern-detail {
+min-width: 0;
+}
+.pattern-detail-head {
+display: grid;
+grid-template-columns: minmax(0, 1fr) minmax(230px, 0.55fr);
+gap: 2rem;
+align-items: end;
+padding-bottom: 1.3rem;
+border-bottom: 1px solid var(--line-strong);
+}
+.pattern-detail-head h2 {
+font-size: clamp(2.7rem, 5.4vw, 5.6rem);
+}
+.pattern-detail-head p {
+color: var(--ink-soft);
+font-family: var(--serif);
+font-size: 1.12rem;
+line-height: 1.45;
+}
+.pattern-story {
+display: grid;
+grid-template-columns: repeat(3, minmax(0, 1fr));
+border-bottom: 1px solid var(--line-strong);
+}
+.pattern-story section {
+min-height: 210px;
+padding: 1.1rem 1rem 1.3rem 0;
+border-right: 1px solid var(--line);
+}
+.pattern-story section:nth-child(2),
+.pattern-story section:nth-child(3) {
+padding-left: 1rem;
+}
+.pattern-story section:last-child {
+border-right: 0;
+padding-right: 0;
+}
+.pattern-story h3,
+.pattern-org-lens h3 {
+font-family: var(--mono);
+font-size: 0.58rem;
+font-weight: 500;
+letter-spacing: 0.08em;
+text-transform: uppercase;
+}
+.pattern-story p,
+.pattern-org-lens p {
+margin-top: 0.5rem;
+color: var(--ink-soft);
+font-size: 0.84rem;
+line-height: 1.52;
+}
+.pattern-org-lens {
+display: grid;
+grid-template-columns: minmax(0, 1fr) auto;
+gap: 1rem;
+align-items: center;
+padding-block: 1.2rem;
+border-bottom: 1px solid var(--line-strong);
+}
+.pattern-org-lens h3 {
+color: var(--teal);
+}
+.pattern-action {
+min-height: 44px;
+padding: 0.5rem 0.7rem;
+border: 1px solid var(--ink);
+background: transparent;
+cursor: pointer;
+font-size: 0.72rem;
+white-space: nowrap;
+}
+.pattern-action:hover {
+background: var(--dark);
+color: var(--light);
+}
+.pattern-example {
+padding-top: 1rem;
+color: var(--muted);
+font-size: 0.75rem;
+line-height: 1.5;
+}
+.pattern-example strong {
+color: var(--ink);
+font-weight: 500;
+}

@@ -1,0 +1,14 @@
+{
+    "name": "business-organization-atlas",
+    "version": "1.0.0",
+    "private": true,
+    "type": "module",
+    "description": "A dependency-free interactive atlas connecting business models, organizational forms, and forces.",
+    "scripts": {
+        "start": "node scripts/serve.mjs",
+        "audit": "node scripts/audit.mjs"
+    },
+    "engines": {
+        "node": ">=18"
+    }
+}

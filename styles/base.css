@@ -7,10 +7,7 @@ scroll-behavior: smooth;
 body {
 margin: 0;
 min-width: 320px;
-background:
-radial-gradient(circle at 14% 0%, rgba(184, 82, 56, 0.055), transparent 25rem),
-radial-gradient(circle at 86% 17%, rgba(50, 108, 99, 0.055), transparent 28rem),
-var(--paper);
+background: var(--paper);
 color: var(--ink);
 font-family: var(--sans);
 font-optical-sizing: auto;
@@ -38,19 +35,6 @@ html[lang="zh-CN"] h2,
 html[lang="zh-CN"] h3,
 html[lang="zh-CN"] blockquote {
 letter-spacing: -0.018em;
-}
-body::before {
-content: "";
-position: fixed;
-inset: 0;
-z-index: -1;
-pointer-events: none;
-opacity: 0.25;
-background-image:
-linear-gradient(rgba(84, 77, 66, 0.045) 1px, transparent 1px),
-linear-gradient(90deg, rgba(84, 77, 66, 0.035) 1px, transparent 1px);
-background-size: 32px 32px;
-mask-image: linear-gradient(to bottom, black, transparent 78%);
 }
 button,
 input,
@@ -92,15 +76,6 @@ font-size: clamp(2.2rem, 4.4vw, 4.3rem);
 }
 h3 {
 font-size: clamp(1.5rem, 2.6vw, 2.4rem);
-}
-.fit-one-line {
-max-width: none !important;
-min-width: 0;
-}
-.fit-one-line.is-single-line {
-max-width: none !important;
-white-space: nowrap;
-width: max-content;
 }
 :focus-visible {
 outline: 2px solid var(--accent);

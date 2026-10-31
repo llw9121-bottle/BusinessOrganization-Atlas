@@ -1,4 +1,5 @@
 import { forms } from "../data/forms.js";
+import { formLearning } from "../data/learning.js";
 import { modelProfiles } from "../data/model-profiles.js";
 import { bridgeGroups, bridgePresets, bridgeTensionRules } from "../data/bridge.js";
 import { applyStaticTranslations, t } from "../i18n/i18n.js";
@@ -6,6 +7,9 @@ import { escapeHtml, structureSvg } from "../core/html.js";
 
 const bridgeGroupOrder = ["customer", "value", "economics", "boundary"];
 const bridgeMatchForms = ["personal", "programmed", "professional", "project", "divisional", "community"];
+const groupLabels = { customer: "Who do you serve?", value: "What must you excel at?", economics: "How is the work funded?", boundary: "Where does the work happen?" };
+let currentResult = null;
+let savedScenario = null;
 
 let activeBridgePreset = "multi_sided";
 const bridgeSelection = {
@@ -66,6 +70,18 @@ function matchedBridgeTensions(presetKey, primary) {
     return matches.slice(0, 2);
 }
 
+function renderScenarioComparison() {
+    const panel = document.getElementById("scenario-comparison");
+    panel.hidden = !savedScenario;
+    document.getElementById("bridge-clear").hidden = !savedScenario;
+    if (!savedScenario || !currentResult) return;
+    const changes = bridgeGroupOrder.filter((group) => savedScenario.selection[group] !== bridgeSelection[group]);
+    panel.innerHTML = `<h3>${escapeHtml(t("Your comparison"))}</h3><div class="scenario-pair">
+        <div><span class="studio-label">${escapeHtml(t("Saved scenario"))}</span><strong>${escapeHtml(t(forms[savedScenario.primary].name))}</strong><small>${escapeHtml(t(forms[savedScenario.adjacent].name))}</small></div>
+        <div><span class="studio-label">${escapeHtml(t("Current scenario"))}</span><strong>${escapeHtml(t(forms[currentResult.primary].name))}</strong><small>${escapeHtml(t(forms[currentResult.adjacent].name))}</small></div></div>
+        ${changes.length ? `<dl>${changes.map((group) => `<div><dt>${escapeHtml(t(groupLabels[group]))}</dt><dd><span>${escapeHtml(t(bridgeGroups[group].options[savedScenario.selection[group]].label))}</span> <span aria-hidden="true">→</span> <strong>${escapeHtml(t(selectedBridgeOption(group).label))}</strong><p>${escapeHtml(t(selectedBridgeOption(group).insight))}</p></dd></div>`).join("")}</dl><p>${escapeHtml(t(savedScenario.primary === currentResult.primary ? "The main form stays the same. The coordination needs and trade-offs can still change." : "The main form has changed. Compare the coordination needs before treating this as a structural recommendation."))}</p>` : `<p>${escapeHtml(t("Saved. Change one choice to see what follows."))}</p>`}`;
+}
+
 export function updateBridge() {
     activeBridgePreset = matchingBridgePreset();
     document.querySelectorAll("[data-bridge-preset]").forEach((button) => {
@@ -91,7 +107,9 @@ export function updateBridge() {
     const fitState = preset?.fitState ||
         (strainsPrimary ? "Needs a bridge" : calculated.spread <= 2 ? "Hybrid opportunity" : "Natural fit");
     const tensions = matchedBridgeTensions(activeBridgePreset, primary);
+    currentResult = { primary, adjacent };
 
+    document.getElementById("bridge-plain").textContent = t(formLearning[primary].plain);
     document.getElementById("bridge-primary").textContent = t(primaryForm.name);
     document.getElementById("bridge-adjacent").textContent = t(adjacentForm.name);
     document.getElementById("bridge-dominant").textContent = t(primaryForm.dominant);
@@ -100,6 +118,7 @@ export function updateBridge() {
     document.getElementById("bridge-fit-summary").textContent = t(preset?.summary || profile.fit);
     document.getElementById("bridge-diagram").innerHTML =
         structureSvg(primaryForm.diagram, t(`${primaryForm.name} structural signature`));
+    document.getElementById("bridge-diagram-reading").textContent = t(formLearning[primary].diagram);
     document.getElementById("bridge-live-primary").textContent = t(primaryForm.name);
     document.getElementById("bridge-live-adjacent").textContent = `${t("with")} ${t(adjacentForm.name)}`;
 
@@ -127,6 +146,7 @@ export function updateBridge() {
         t(tensions[0].whatIf || profile.whatIf);
     document.getElementById("bridge-announcement").textContent =
         `${t(primaryForm.name)} ${t("with")} ${t(adjacentForm.name)}. ${t(fitState)}. ${t(tensions[0].title)}.`;
+    renderScenarioComparison();
     applyStaticTranslations(document.getElementById("view-bridge"));
 }
 
@@ -144,6 +164,18 @@ export function applyBridgeSelection(selection) {
 }
 
 export function initBridgeView() {
+    document.getElementById("bridge-save").addEventListener("click", () => {
+        savedScenario = { selection: { ...bridgeSelection }, ...currentResult };
+        renderScenarioComparison();
+    });
+    document.getElementById("bridge-clear").addEventListener("click", () => {
+        savedScenario = null;
+        renderScenarioComparison();
+        document.getElementById("bridge-save").focus();
+    });
+    document.getElementById("bridge-open-form").addEventListener("click", () => {
+        document.dispatchEvent(new CustomEvent("atlas:inspect-form", { detail: currentResult.primary }));
+    });
     document.querySelectorAll("[data-bridge-option]").forEach((button) => {
         button.addEventListener("click", () => {
             bridgeSelection[button.dataset.bridgeGroup] = button.dataset.bridgeOption;

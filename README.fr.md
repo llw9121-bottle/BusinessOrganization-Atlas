@@ -69,7 +69,7 @@ package.json                Scripts uniquement ; aucune dépendance d'exécution
 styles/                     Une feuille de style par couche ou par vue
   fonts.css                 @font-face de neuf WOFF2 locales
   tokens.css                Variables de couleur, d'espacement et de typographie
-  base.css                  Reset, styles par défaut, ajustement des titres
+  base.css                  Reset, styles par défaut, retour naturel des titres à la ligne
   layout.css                En-tête, navigation, sélecteur de langue, coque des vues
   atlas.css ... overrides.css  Styles par vue, dans l'ordre source
 assets/fonts/               Sous-ensembles Inter et Noto Sans SC/JP/KR avec licences
@@ -110,9 +110,8 @@ Notes d'implémentation :
 - La seule valeur persistée est la langue dans `localStorage` (`organization-atlas-language`). Les
   échecs de lecture et d'écriture sont gérés.
 - La navigation utilise `history.replaceState` : changer d'onglet n'accumule pas d'historique.
-- Les titres H1/H2 sont ajustés sur une ligne après le rendu, le chargement des polices, un changement de
-  langue et un redimensionnement. S'ils ne peuvent pas rester lisibles, ils reviennent au retour à la
-  ligne normal.
+- Les titres reviennent naturellement à la ligne selon la langue et la largeur. Les préférences de réduction des animations sont respectées.
+- L’atelier propose un exemple guidé Google Search, des blocs Canvas liés, une comparaison de scénarios et de deux formes organisationnelles. Ces états ne sont conservés que pendant la visite courante.
 
 ## Tâches courantes
 
@@ -186,4 +185,4 @@ clients.
 ## Navigateurs pris en charge
 
 Versions actuelles de Chrome, Edge, Firefox et Safari. L'application nécessite les ES Modules,
-`ResizeObserver`, `localStorage` et un CSS moderne ; elle fonctionne hors ligne une fois chargée.
+`localStorage` et un CSS moderne ; elle fonctionne hors ligne une fois chargée.

@@ -1,4 +1,5 @@
 import { forms } from "../data/forms.js";
+import { formLearning } from "../data/learning.js";
 import { applyStaticTranslations, t } from "../i18n/i18n.js";
 import { structureSvg } from "../core/html.js";
 import { loadPreset } from "./lab-view.js";
@@ -11,8 +12,9 @@ function updateInspector(formKey) {
     const form = forms[formKey];
     document.getElementById("inspector-number").textContent = `${form.number} · ${t(form.name)}`;
     document.getElementById("inspector-title").textContent = t(form.name);
+    document.getElementById("inspector-plain").textContent = t(formLearning[formKey].plain);
     document.getElementById("inspector-archetype").textContent = `${t(form.archetype)} · ${t(form.dominant)}`;
-    document.getElementById("inspector-diagram").innerHTML = structureSvg(form.diagram, t(`${form.name} structural signature`));
+    document.getElementById("inspector-diagram").innerHTML = structureSvg(form.diagram, t(`${form.name} structural signature`), t(formLearning[formKey].diagram));
     document.getElementById("inspector-copy").textContent = t(form.summary);
     document.getElementById("inspector-coordination").textContent = t(form.coordination);
     document.getElementById("inspector-power").textContent = t(form.power);

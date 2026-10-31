@@ -68,7 +68,7 @@ package.json                Solo scripts; sin dependencias de ejecución
 styles/                     Una hoja de estilos por capa o vista
   fonts.css                 @font-face de nueve WOFF2 locales
   tokens.css                Variables de color, espaciado y tipografía
-  base.css                  Reset, valores por defecto, ajuste de titulares
+  base.css                  Reset, valores por defecto y salto natural de títulos
   layout.css                Cabecera, navegación, selector de idioma, marco de vista
   atlas.css ... overrides.css  Estilos por vista, en orden de origen
 assets/fonts/               Subconjuntos de Inter y Noto Sans SC/JP/KR con licencias
@@ -110,8 +110,8 @@ Notas de implementación:
   lectura y escritura están gestionados.
 - La navegación usa `history.replaceState`, así que cambiar de pestaña no llena el historial del
   navegador.
-- Los titulares H1/H2 se ajustan a una línea tras renderizar, al cargar las fuentes, al cambiar de idioma
-  y al redimensionar la ventana. Si no pueden seguir siendo legibles, vuelven al salto de línea normal.
+- Los títulos se ajustan con saltos de línea naturales según el idioma y la pantalla. Se respeta la preferencia de movimiento reducido.
+- El estudio ofrece un ejemplo guiado de Google Search, bloques Canvas conectados y comparaciones de escenarios y formas organizativas. Estos estados solo se conservan durante la visita actual.
 
 ## Tareas habituales
 
@@ -185,4 +185,4 @@ clientes.
 ## Compatibilidad
 
 Versiones actuales de Chrome, Edge, Firefox y Safari. La aplicación necesita ES Modules,
-`ResizeObserver`, `localStorage` y CSS moderno; funciona sin conexión una vez cargada.
+`localStorage` y CSS moderno; funciona sin conexión una vez cargada.

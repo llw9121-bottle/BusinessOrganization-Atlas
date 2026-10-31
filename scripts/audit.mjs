@@ -78,8 +78,6 @@ for (const stylesheet of stylesheetLinks) {
     }
 }
 
-const baseCss = readFileSync(resolve(projectRoot, "styles/base.css"), "utf8");
-assert.match(baseCss, /\.fit-one-line\.is-single-line\s*\{/, "Expected the one-line headline style.");
 
 // --- JavaScript modules ------------------------------------------------
 function listJavaScriptFiles(directory) {
@@ -151,10 +149,6 @@ function visitModule(file) {
 }
 for (const file of jsFiles) visitModule(file);
 
-const headlineFitSource = readFileSync(resolve(projectRoot, "js/ui/headline-fit.js"), "utf8");
-assert.match(headlineFitSource, /querySelectorAll\("h1, h2"\)/, "All primary headings must participate in one-line fitting.");
-const appSource = readFileSync(resolve(projectRoot, "js/app.js"), "utf8");
-assert.match(appSource, /document\.fonts\?\.ready\.then\(scheduleOneLineFit\)/, "Headline fitting must rerun after fonts load.");
 
 // --- Palette contrast --------------------------------------------------
 const tokensCss = readFileSync(resolve(projectRoot, "styles/tokens.css"), "utf8");
@@ -237,8 +231,35 @@ const { businessModelPatterns } = await import(dataUrl("patterns.js"));
 const { designEpicenters } = await import(dataUrl("design-epicenters.js"));
 const { bridgeGroups, bridgePresets, bridgeTensionRules } = await import(dataUrl("bridge.js"));
 const { translations } = await import(pathToFileURL(resolve(projectRoot, "js/i18n/translations.js")).href);
+const { studioTranslations } = await import(pathToFileURL(resolve(projectRoot, "js/i18n/studio-translations.js")).href);
+const { formLearning, canvasConnections, searchExample, lessonNotes } = await import(dataUrl("learning.js"));
 
 const formKeys = Object.keys(forms);
+assert.deepEqual(Object.keys(formLearning), formKeys, "Every form needs a plain-language explanation and diagram caption.");
+const learningSources = [];
+for (const learning of Object.values(formLearning)) {
+    assert.ok(learning.plain && learning.diagram, "Form learning text must be present.");
+    learningSources.push(learning.plain, learning.diagram);
+}
+assert.deepEqual(Object.keys(searchExample).sort(), Object.keys(canvasBlocks).sort(), "The guided example must cover every Canvas block.");
+assert.deepEqual(Object.keys(canvasConnections).sort(), Object.keys(canvasBlocks).sort(), "Every Canvas block must explain its connections.");
+for (const [blockKey, connection] of Object.entries(canvasConnections)) {
+    assert.ok(connection.explanation && connection.related.length > 0, `Canvas block ${blockKey} needs an explanation and related blocks.`);
+    assert.equal(new Set(connection.related).size, connection.related.length, `Duplicate connection in ${blockKey}.`);
+    for (const related of connection.related) {
+        assert.ok(related in canvasBlocks && related !== blockKey, `Invalid Canvas connection ${blockKey}/${related}.`);
+    }
+    learningSources.push(connection.explanation);
+}
+learningSources.push(...Object.values(searchExample), ...Object.values(lessonNotes));
+const studioKeys = Object.keys(studioTranslations.zh).sort();
+for (const locale of ["zh", "ja", "ko", "es", "fr"]) {
+    assert.deepEqual(Object.keys(studioTranslations[locale]).sort(), studioKeys, `Studio translation keys differ in ${locale}.`);
+    for (const source of [...studioKeys, ...learningSources]) {
+        assert.equal(typeof translations[locale].strings[source], "string", `Missing ${locale} learning translation: ${source}`);
+        assert.ok(translations[locale].strings[source].trim(), `Empty ${locale} learning translation: ${source}`);
+    }
+}
 assert.deepEqual(Object.keys(modelProfiles), formKeys, "Every form needs exactly one model profile.");
 assert.deepEqual(Object.keys(diagrams), formKeys, "Every form needs exactly one structural diagram.");
 for (const [formKey, form] of Object.entries(forms)) {

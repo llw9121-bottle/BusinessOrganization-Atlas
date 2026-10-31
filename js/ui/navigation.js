@@ -1,5 +1,4 @@
 import { t } from "../i18n/i18n.js";
-import { scheduleOneLineFit } from "./headline-fit.js";
 
 const navButtons = Array.from(document.querySelectorAll(".nav-button"));
 const views = Array.from(document.querySelectorAll(".view"));
@@ -32,7 +31,7 @@ export function closeNavigation(returnFocus = false) {
     }
 }
 
-export function showView(viewName, updateHash = true) {
+export function showView(viewName, updateHash = true, keepNavigationOpen = false) {
     navButtons.forEach((button) => {
         const active = button.dataset.view === viewName;
         button.setAttribute("aria-selected", String(active));
@@ -41,12 +40,12 @@ export function showView(viewName, updateHash = true) {
     views.forEach((view) => {
         view.hidden = view.id !== `view-${viewName}`;
     });
-    scheduleOneLineFit();
     if (updateHash && history.replaceState) {
         history.replaceState(null, "", `#${viewName}`);
     }
-    closeNavigation(primaryNav.classList.contains("is-open"));
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    if (!keepNavigationOpen) closeNavigation(primaryNav.classList.contains("is-open"));
+    document.dispatchEvent(new CustomEvent("atlas:view-change", { detail: viewName }));
+    window.scrollTo({ top: 0, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth" });
 }
 
 export function initNavigation() {
@@ -66,7 +65,7 @@ export function initNavigation() {
         }
     });
 
-    const desktopNavigation = window.matchMedia("(min-width: 1241px)");
+    const desktopNavigation = window.matchMedia("(min-width: 1001px)");
     desktopNavigation.addEventListener("change", (event) => {
         if (event.matches) closeNavigation(false);
     });
@@ -81,7 +80,7 @@ export function initNavigation() {
                 event.key === "End" ? navButtons.length - 1 :
                     (index + direction + navButtons.length) % navButtons.length;
             const nextButton = navButtons[nextIndex];
-            showView(nextButton.dataset.view);
+            showView(nextButton.dataset.view, true, true);
             nextButton.focus();
         });
     });

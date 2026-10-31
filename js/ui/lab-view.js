@@ -1,5 +1,6 @@
 import { forces, presets } from "../data/forces.js";
 import { forms } from "../data/forms.js";
+import { formLearning } from "../data/learning.js";
 import { applyStaticTranslations, getLanguage, t } from "../i18n/i18n.js";
 import { localizedAnchors, localizedForceLabels } from "../i18n/localized-labels.js";
 import { escapeHtml, structureSvg } from "../core/html.js";
@@ -38,7 +39,7 @@ function updateLab(sourcePreset = null) {
     document.getElementById("lab-anchor-copy").innerHTML =
         `<strong>${escapeHtml(t("Containment"))}</strong><br>${escapeHtml(t(force.containment))}`;
     document.getElementById("lab-diagram").innerHTML =
-        structureSvg(form.diagram, t(`${form.name} structural signature`));
+        structureSvg(form.diagram, t(`${form.name} structural signature`), t(formLearning[force.form].diagram));
 
     document.querySelectorAll("[data-force-control]").forEach((control) => {
         control.classList.toggle("is-dominant", control.dataset.forceControl === dominantKey);
@@ -46,12 +47,12 @@ function updateLab(sourcePreset = null) {
 
     if (sourcePreset !== null) {
         activePreset = sourcePreset;
-        document.querySelectorAll(".preset").forEach((button) => {
+        document.querySelectorAll("[data-preset]").forEach((button) => {
             button.setAttribute("aria-pressed", String(button.dataset.preset === sourcePreset));
         });
     } else {
         activePreset = null;
-        document.querySelectorAll(".preset").forEach((button) => {
+        document.querySelectorAll("[data-preset]").forEach((button) => {
             button.setAttribute("aria-pressed", "false");
         });
     }

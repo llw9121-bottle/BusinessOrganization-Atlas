@@ -13,6 +13,10 @@ why an organization works the way it does — and what would have to change for 
 - **Six languages.** English, 简体中文, 日本語, 한국어, Español, and Français switch instantly.
 - **No build step and no dependencies.** Plain HTML, CSS, and native ES modules.
 
+The interface combines an editorial reading experience with an interactive learning studio: a guided
+Google Search example, connected Canvas blocks, saved-versus-current Bridge scenarios, and two-form
+comparisons. Scenario and lesson state last only for the current page visit; they are not persisted.
+
 ## Take the tour
 
 The atlas has ten sections. The first one, Bridge, opens by default.
@@ -66,7 +70,7 @@ package.json                Scripts only; no runtime dependencies
 styles/                     One stylesheet per layer or view
   fonts.css                 @font-face declarations for nine local WOFF2 files
   tokens.css                Colour, spacing, and typography variables
-  base.css                  Reset, document defaults, headline fitting
+  base.css                  Reset and document defaults; headings wrap naturally
   layout.css                Header, navigation, language picker, view shell
   atlas.css ... overrides.css  View-level styles, in source order
 assets/fonts/               Inter, Noto Sans SC/JP/KR subsets plus licence text
@@ -106,8 +110,10 @@ A few implementation notes:
 - The language preference is the only value stored in `localStorage`
   (`organization-atlas-language`). Read and write failures are handled.
 - Navigation uses `history.replaceState`, so switching tabs does not flood browser history.
-- H1/H2 headings are fitted to one line after rendering, after fonts load, after language changes, and
-  after viewport resizes. If a headline cannot stay legible, it falls back to normal wrapping.
+- Headings wrap naturally across languages and viewport sizes. Reduced-motion preferences disable
+  interface transitions and smooth scrolling.
+- `js/data/learning.js` holds diagram captions, Canvas connections, and the guided example. The new
+  learning vocabulary is translated in `js/i18n/studio-translations.js`; the audit checks all five locales.
 
 ## Common tasks
 
@@ -175,5 +181,5 @@ to test against real work, incentives, power, history, and customer evidence.
 
 ## Browser support
 
-Current versions of Chrome, Edge, Firefox, and Safari. The app needs ES modules, `ResizeObserver`,
+Current versions of Chrome, Edge, Firefox, and Safari. The app needs ES modules,
 `localStorage`, and modern CSS; it works offline once loaded.

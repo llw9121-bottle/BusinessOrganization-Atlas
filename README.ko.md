@@ -67,7 +67,7 @@ package.json                스크립트만 포함. 런타임 의존성 없음
 styles/                     레이어 또는 뷰별 스타일시트
   fonts.css                 로컬 WOFF2 9종의 @font-face
   tokens.css                색상·간격·타이포그래피 변수
-  base.css                  리셋, 문서 기본값, 제목 한 줄 맞춤
+  base.css                  리셋, 문서 기본값, 제목 자연 줄바꿈
   layout.css                헤더, 내비게이션, 언어 선택기, 뷰 셸
   atlas.css ... overrides.css  뷰별 스타일 (소스 순서 유지)
 assets/fonts/               Inter, Noto Sans SC/JP/KR 서브셋과 라이선스
@@ -107,8 +107,8 @@ data  ->  i18n  ->  ui  ->  app.js
 - 유일하게 저장되는 값은 `localStorage`의 언어 설정(`organization-atlas-language`)입니다. 읽기와
   쓰기 실패도 처리합니다.
 - 내비게이션은 `history.replaceState`를 사용하므로 탭 전환으로 브라우저 기록이 쌓이지 않습니다.
-- H1/H2 제목은 렌더링 후, 폰트 로드 후, 언어 변경 후, 창 크기 변경 후에 한 줄에 맞도록 다시
-  조정됩니다. 가독성을 유지할 수 없으면 일반 줄바꿈으로 돌아갑니다.
+- 제목은 언어와 화면 너비에 맞춰 자연스럽게 줄바꿈되며 동작 줄이기 설정을 지원합니다.
+- Google 검색 안내 사례, Canvas 블록 연결, 시나리오 비교, 두 조직 형태 비교를 제공합니다. 사례와 비교 상태는 현재 페이지 방문 중에만 유지됩니다.
 
 ## 자주 하는 작업
 
@@ -176,5 +176,5 @@ License 1.1로 제공됩니다. 전체 저작자 표시와 라이선스 본문:
 
 ## 브라우저 지원
 
-최신 Chrome, Edge, Firefox, Safari. ES Modules, `ResizeObserver`, `localStorage`, 현대적 CSS가
+최신 Chrome, Edge, Firefox, Safari. ES Modules, `localStorage`, 현대적 CSS가
 필요합니다. 한 번 로드한 뒤에는 오프라인에서도 동작합니다.

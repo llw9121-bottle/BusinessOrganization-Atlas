@@ -94,6 +94,16 @@
   </header>
 
   <main id="main-content" class="shell">
+    <aside class="lesson-bar" id="lesson-bar" aria-label="Guided example" hidden>
+      <div class="lesson-context"><span class="lesson-dot" aria-hidden="true"></span><div><span class="studio-label">Guided example</span><strong>Google Search</strong><p id="lesson-note"></p></div></div>
+      <nav class="lesson-steps" aria-label="Example learning path">
+        <button type="button" data-lesson-step="canvas"><span>01</span> Canvas</button>
+        <button type="button" data-lesson-step="bridge"><span>02</span> Bridge</button>
+        <button type="button" data-lesson-step="forms"><span>03</span> Forms</button>
+        <button type="button" data-lesson-step="forces"><span>04</span> Forces</button>
+      </nav>
+      <button class="studio-button quiet" id="lesson-close" type="button">Leave example</button>
+    </aside>
     <section class="view" id="view-atlas" role="tabpanel" aria-labelledby="tab-atlas" hidden>
       <div class="hero">
         <div>
@@ -125,7 +135,7 @@
           <h2>Four fundamentals, three conditions.</h2>
         </div>
         <p>
-          The diamond places the four fundamental forms by their most revealing tensions. Select any form to read its coordination engine, power pattern, likely strengths, and signature risk.
+          Explore four fundamental ways to coordinate work. Select a form to see how decisions are made, when it works, and what can go wrong.
         </p>
       </div>
 
@@ -172,6 +182,8 @@
             </div>
           </div>
 
+          <details class="map-reading"><summary>How to read this map</summary><p>These four forms highlight different coordination logics, not a ranking. Stable work favors standards; dynamic work needs adaptation. Authority can sit with a chief or with experts. The three forms below describe divisions, shared mission, or contested power beyond these four fundamentals.</p></details>
+
           <div class="secondary-forms" aria-label="Three additional organizational forms">
             <button class="secondary-form" type="button" data-form="divisional" aria-pressed="false">
               <span>05 · separation</span>
@@ -192,6 +204,7 @@
           <div class="inspector-top">
             <span class="inspector-no" id="inspector-number">02 · Personal Enterprise</span>
             <h3 id="inspector-title">Personal Enterprise</h3>
+            <p class="form-plain" id="inspector-plain"></p>
             <div class="inspector-archetype" id="inspector-archetype">Autocracy · consolidation</div>
             <div class="inspector-diagram" id="inspector-diagram"></div>
           </div>
@@ -252,6 +265,15 @@
         </p>
       </div>
 
+      <details class="form-comparison" id="form-comparison">
+        <summary>Compare two organizational forms</summary>
+        <div class="comparison-pickers">
+          <label><span>First form</span><select id="compare-form-a"></select></label>
+          <label><span>Second form</span><select id="compare-form-b"></select></label>
+        </div>
+        <div class="form-comparison-grid" id="form-comparison-grid" aria-live="polite"></div>
+      </details>
+
       <div class="forms-layout">
         <nav class="form-index" aria-label="Organizational forms">
           <button class="form-index-button" type="button" data-form-index="personal" aria-current="true">
@@ -283,7 +305,7 @@
             <span>Chapter 7</span>
           </div>
           <div class="detail-title-row">
-            <h2 id="detail-title">Personal Enterprise</h2>
+            <div><h2 id="detail-title">Personal Enterprise</h2><p class="form-plain" id="detail-plain"></p></div>
             <p class="detail-lead" id="detail-lead">
               A loose, founder-centered system coordinated directly by a chief with a wide span of control.
             </p>
@@ -383,15 +405,30 @@
     </section>
 
     <section class="view" id="view-bridge" role="tabpanel" aria-labelledby="tab-bridge">
-      <div class="view-header">
-        <div>
-          <span class="eyebrow">Business model · Organization</span>
-          <h2>Connect the value logic<br>to the way work works.</h2>
+      <div class="studio-hero">
+        <div class="studio-hero-copy">
+          <span class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Business × Organization · An interactive field guide</span>
+          <h1>How should your<br>business <em>organize?</em></h1>
+          <p>Connect how you create value to how people work together. Explore the choices, understand the trade-offs, and find a structure that fits.</p>
+          <div class="studio-actions"><button class="studio-button primary" type="button" data-start-example>Explore an example <span aria-hidden="true">↗</span></button><a class="studio-button" href="#bridge-workspace">Build your scenario <span aria-hidden="true">↓</span></a></div>
+          <span class="hero-footnote">Nine model blocks. Seven organizational forms. One connected system.</span>
         </div>
-        <p>
-          A business model describes how value is created, delivered, and captured. An organization form describes how people coordinate and decide. Choose four model moves to see where those logics align, collide, or need a hybrid.
-        </p>
+        <div class="concept-flow" aria-label="Business choices lead to coordination needs, organizational forms, and trade-offs">
+          <div class="concept-flow-top"><span class="studio-label">From value to structure</span><span class="concept-live"><span aria-hidden="true"></span> Explore the connection</span></div>
+          <div class="concept-step"><span class="concept-number">01</span><div><span>Business model</span><strong>How do you create value?</strong><small>Customers · offer · economics</small></div><span class="concept-symbol" aria-hidden="true">↗</span></div>
+          <div class="concept-step"><span class="concept-number">02</span><div><span>Coordination needs</span><strong>What does the work require?</strong><small>Standards · expertise · collaboration</small></div><span class="concept-symbol" aria-hidden="true">⇄</span></div>
+          <div class="concept-step featured"><span class="concept-number">03</span><div><span>Organizational form</span><strong>How should people organize?</strong><small>Decisions · teams · authority</small></div><span class="concept-symbol" aria-hidden="true">⌘</span></div>
+          <div class="concept-caption"><span aria-hidden="true">↳</span><span>Every structure brings a trade-off. Find its counterweight.</span></div>
+        </div>
       </div>
+
+      <nav class="learning-path" aria-label="Start here">
+        <button type="button" data-learn-target="canvas"><span class="path-number">01</span><span><strong>Understand the model</strong><small>Explore the nine building blocks</small></span><span aria-hidden="true">↗</span></button>
+        <button type="button" data-start-example><span class="path-number">02</span><span><strong>Follow a real example</strong><small>See how Google Search connects the ideas</small></span><span aria-hidden="true">↗</span></button>
+        <button type="button" data-learn-target="forms"><span class="path-number">03</span><span><strong>Compare ways to organize</strong><small>Discover what makes each form work</small></span><span aria-hidden="true">↗</span></button>
+      </nav>
+
+      <div class="workspace-heading" id="bridge-workspace"><div><span class="eyebrow">The connection studio</span><h2>Change a choice.<br>See what follows.</h2></div><p>Choose who you serve, what you offer, how it is funded, and where the work happens. Follow the reasoning from each choice to a possible structure.</p></div>
 
       <div class="bridge-layout">
         <div class="bridge-controls">
@@ -411,10 +448,11 @@
             <span>Live result</span>
             <strong id="bridge-live-primary">Programmed Machine</strong>
             <small id="bridge-live-adjacent">with Divisional Form</small>
+            <a href="#bridge-result">See reasoning ↓</a>
           </div>
 
           <fieldset class="bridge-group">
-            <legend>Customer architecture</legend>
+            <legend>Who do you serve?</legend>
             <p>Who creates the demand for this organization’s value?</p>
             <div class="bridge-options">
               <button class="bridge-option" type="button" data-bridge-group="customer" data-bridge-option="mass" aria-pressed="false">Mass market</button>
@@ -426,7 +464,7 @@
           </fieldset>
 
           <fieldset class="bridge-group">
-            <legend>Value and activity signature</legend>
+            <legend>What must you excel at?</legend>
             <p>What must the organization actually be excellent at?</p>
             <div class="bridge-options">
               <button class="bridge-option" type="button" data-bridge-group="value" data-bridge-option="price_reliability" aria-pressed="false">Price and reliability</button>
@@ -438,7 +476,7 @@
           </fieldset>
 
           <fieldset class="bridge-group">
-            <legend>Economic bargain</legend>
+            <legend>How is the work funded?</legend>
             <p>How does value turn into resources, and who carries the risk?</p>
             <div class="bridge-options">
               <button class="bridge-option" type="button" data-bridge-group="economics" data-bridge-option="transaction" aria-pressed="false">One-time transaction</button>
@@ -450,7 +488,7 @@
           </fieldset>
 
           <fieldset class="bridge-group">
-            <legend>Boundary logic</legend>
+            <legend>Where does the work happen?</legend>
             <p>What must remain inside, and what should connect through a wider network?</p>
             <div class="bridge-options">
               <button class="bridge-option" type="button" data-bridge-group="boundary" data-bridge-option="owned" aria-pressed="false">Fully owned</button>
@@ -461,35 +499,39 @@
           </fieldset>
 
           <button class="bridge-reset" id="bridge-reset" type="button">Reset to multi-sided platform</button>
+          <div class="scenario-tools"><button class="studio-button" id="bridge-save" type="button">Save for comparison</button><button class="studio-button quiet" id="bridge-clear" type="button" hidden>Clear comparison</button></div>
+          <section class="scenario-comparison" id="scenario-comparison" aria-live="polite" hidden></section>
         </div>
 
-        <aside class="bridge-result">
+        <aside class="bridge-result" id="bridge-result">
           <span class="sr-only" id="bridge-announcement" aria-live="polite"></span>
           <div class="bridge-result-head">
-            <span class="bridge-night-eyebrow">Business model → organization</span>
+            <span class="bridge-night-eyebrow">A possible way to organize</span>
+            <p class="bridge-plain" id="bridge-plain"></p>
             <h2 id="bridge-primary">Programmed Machine</h2>
             <span class="bridge-fit-state" id="bridge-fit-state">Hybrid opportunity</span>
             <p class="bridge-fit-summary" id="bridge-fit-summary">The model needs a stable platform core while several interdependent sides follow different economic needs.</p>
             <div class="bridge-result-meta">
               <div class="bridge-meta-item">
-                <span>Adjacent form</span>
+                <span>Combine with</span>
                 <strong id="bridge-adjacent">Divisional Form</strong>
               </div>
               <div class="bridge-meta-item">
-                <span>Dominant force</span>
+                <span>Main organizing force</span>
                 <strong id="bridge-dominant">Efficiency</strong>
               </div>
               <div class="bridge-meta-item">
-                <span>Suggested anchor</span>
+                <span>Keep it balanced with</span>
                 <strong id="bridge-anchor">Collaboration</strong>
               </div>
             </div>
           </div>
 
           <div class="bridge-diagram" id="bridge-diagram"></div>
+          <p class="diagram-reading" id="bridge-diagram-reading"></p>
 
           <div class="bridge-links">
-            <span class="bridge-section-label">Model-to-organization links</span>
+            <span class="bridge-section-label">Why these choices point here</span>
             <dl class="bridge-link-list">
               <div class="bridge-link-row">
                 <dt>Customers</dt>
@@ -524,6 +566,7 @@
             <span class="bridge-night-eyebrow">What if…</span>
             <p id="bridge-whatif-text">What if the subsidized side began paying?</p>
           </div>
+          <div class="result-next"><button class="studio-button" id="bridge-open-form" type="button">Explore this form <span aria-hidden="true">↗</span></button><span>Interpretation, not a diagnosis.</span></div>
         </aside>
       </div>
     </section>
@@ -586,6 +629,8 @@
               <strong>Revenue streams</strong>
             </button>
           </div>
+          <div class="canvas-connections" aria-live="polite"><span class="studio-label">Connected blocks</span><p id="canvas-connection-copy"></p><div id="canvas-connection-links"></div></div>
+          <div class="canvas-example" id="canvas-example" hidden><span class="studio-label">Google Search · In this block</span><p id="canvas-example-copy"></p></div>
         </div>
 
         <aside class="canvas-inspector" aria-live="polite">

@@ -1,3 +1,5 @@
+import { studioTranslations } from "./studio-translations.js";
+
 export const translations = {
   en: { strings: {} },
   zh: {
@@ -2631,3 +2633,5 @@ Object.assign(translations.fr.strings, {
   "Open navigation": "Ouvrir la navigation",
   "Close navigation": "Fermer la navigation"
 });
+
+for (const [locale, strings] of Object.entries(studioTranslations)) Object.assign(translations[locale].strings, strings);

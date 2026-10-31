@@ -64,7 +64,7 @@ package.json                仅包含脚本，无运行时依赖
 styles/                     按层或按视图拆分的样式表
   fonts.css                 九份本地 WOFF2 字体的 @font-face
   tokens.css                颜色、间距和排版变量
-  base.css                  重置、文档默认样式、标题单行适配
+  base.css                  重置、文档默认样式、标题自然换行
   layout.css                页眉、导航、语言选择器、视图外壳
   atlas.css ... overrides.css  各视图样式，保持源码顺序
 assets/fonts/               Inter、Noto Sans SC/JP/KR 子集及许可文本
@@ -101,8 +101,8 @@ data  ->  i18n  ->  ui  ->  app.js
 - 唯一持久化的值是 `localStorage` 中的语言偏好（键名 `organization-atlas-language`），读写失败
   均有处理。
 - 导航使用 `history.replaceState`，切换标签不会污染浏览器历史。
-- 页面渲染后、字体加载后、切换语言后和窗口尺寸变化后，H1/H2 标题都会重新尝试单行适配；如果无法
-  保持可读，则回退为正常换行。
+- 标题根据语言和视口宽度自然换行。界面支持减少动态效果的偏好设置。
+- 学习工作室提供 Google 搜索引导案例、画布模块关联、商业情境比较和两种组织形态对照。案例与比较状态仅在当前页面访问期间保留。
 
 ## 常见任务
 
@@ -163,5 +163,5 @@ License 1.1 授权。完整署名与许可文本见：
 
 ## 浏览器支持
 
-当前版本的 Chrome、Edge、Firefox 和 Safari。应用需要 ES Modules、`ResizeObserver`、
+当前版本的 Chrome、Edge、Firefox 和 Safari。应用需要 ES Modules、
 `localStorage` 与现代 CSS；加载完成后可离线使用。

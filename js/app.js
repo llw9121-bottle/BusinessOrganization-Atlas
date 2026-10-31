@@ -1,6 +1,5 @@
 import { defaultLanguage, languageMeta } from "./i18n/languages.js";
 import { applyStaticTranslations, setLanguageCode, t } from "./i18n/i18n.js";
-import { scheduleOneLineFit } from "./ui/headline-fit.js";
 import { initNavigation, refreshNavigationLabel, showView } from "./ui/navigation.js";
 import { initAtlasView, renderAtlasView } from "./ui/atlas-view.js";
 import { initFormDetail, renderFormDetail } from "./ui/form-detail.js";
@@ -12,6 +11,7 @@ import { initLabView, renderLabView } from "./ui/lab-view.js";
 import { initTransitionsView, renderTransitionsView } from "./ui/transitions-view.js";
 import { initCasesView } from "./ui/cases-view.js";
 import { initAboutView } from "./ui/about-view.js";
+import { initLearningView, renderLearningView } from "./ui/learning-view.js";
 
 const VIEW_NAMES = [
     "bridge", "canvas", "patterns", "design", "cases",
@@ -28,6 +28,7 @@ function renderLocalizedState() {
     renderDesignView();
     renderLabView();
     renderTransitionsView();
+    renderLearningView();
 }
 
 function applyLanguage(languageCode, persist = true) {
@@ -41,7 +42,6 @@ function applyLanguage(languageCode, persist = true) {
     applyStaticTranslations(document);
     renderLocalizedState();
     applyStaticTranslations(document);
-    scheduleOneLineFit();
     if (persist) {
         try {
             localStorage.setItem(LANGUAGE_STORAGE_KEY, activeLanguage);
@@ -68,6 +68,7 @@ function init() {
     initTransitionsView();
     initCasesView();
     initAboutView();
+    initLearningView();
 
     document.getElementById("language-select").addEventListener("change", (event) => {
         applyLanguage(event.target.value);
@@ -87,7 +88,6 @@ function init() {
         savedLanguage = defaultLanguage;
     }
     applyLanguage(savedLanguage, false);
-    document.fonts?.ready.then(scheduleOneLineFit);
 }
 
 init();

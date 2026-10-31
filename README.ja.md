@@ -68,7 +68,7 @@ package.json                スクリプトのみ。実行時の依存関係な�
 styles/                     レイヤーまたはビューごとのスタイルシート
   fonts.css                 ローカル WOFF2 9 書体の @font-face
   tokens.css                色・余白・タイポグラフィの変数
-  base.css                  リセット、既定スタイル、見出しの 1 行調整
+  base.css                  リセット、既定スタイル、見出しの自然な折り返し
   layout.css                ヘッダー、ナビゲーション、言語選択、ビューの外枠
   atlas.css ... overrides.css  ビュー別スタイル（ソース順を維持）
 assets/fonts/               Inter、Noto Sans SC/JP/KR のサブセットとライセンス
@@ -107,8 +107,8 @@ data  ->  i18n  ->  ui  ->  app.js
 - 永続化するのは `localStorage` の言語設定（`organization-atlas-language`）だけです。読み書きの
   失敗も処理します。
 - ナビゲーションは `history.replaceState` を使うため、タブ切り替えでブラウザ履歴が増えません。
-- H1/H2 の見出しは、描画後・フォント読み込み後・言語切り替え後・ウィンドウサイズ変更後に 1 行へ
-  収まるよう再調整されます。読みやすさを保てない場合は通常の折り返しに戻ります。
+- 見出しは言語と画面幅に合わせて自然に折り返します。動きを減らす設定にも対応します。
+- Google 検索のガイド付き事例、Canvas の関連要素、シナリオ比較、2つの組織形態の比較を利用できます。事例と比較の状態は現在のページ訪問中のみ保持されます。
 
 ## よくある作業
 
@@ -177,5 +177,5 @@ Structure in Sevens』（Berrett-Koehler、2023）の第 2〜21 章を要約し�
 
 ## ブラウザ対応
 
-最新版の Chrome、Edge、Firefox、Safari。ES Modules、`ResizeObserver`、`localStorage`、現代的な
+最新版の Chrome、Edge、Firefox、Safari。ES Modules、`localStorage`、現代的な
 CSS が必要です。一度読み込めばオフラインでも動作します。

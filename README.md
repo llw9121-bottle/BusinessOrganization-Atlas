@@ -1,185 +1,171 @@
-# Business × Organization Atlas
+# 商业模式 × 组织形态图谱
 
-**English** · [简体中文](README.zh-CN.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Español](README.es.md) · [Français](README.fr.md)
+[English](README.en.md) · **简体中文** · [日本語](README.ja.md) · [한국어](README.ko.md) · [Español](README.es.md) · [Français](README.fr.md)
 
-An interactive atlas that connects **business-model choices** with **organizational forms, forces, and
-transitions**. It is an interpretive field guide to Henry Mintzberg's *Understanding Organizations...
-Finally!* (Berrett-Koehler, 2023), not a replacement for the book.
+一个把**商业模式选择**与**组织形态、力量与转型**连接起来的互动图谱。它是对亨利·明茨伯格
+《终于看懂组织：七种结构》（Berrett-Koehler，2023）的解读式指南，不能替代原书。
 
-It is built for founders, operators, consultants, and students who want to ask better questions about
-why an organization works the way it does — and what would have to change for a different model to fit.
+它面向创始人、管理者、顾问和学生，帮助你提出更好的问题：一个组织为什么这样运作？如果换一种
+商业模式，又需要改变什么？
 
-- **No account, no backend, no analytics.** Every calculation runs in your browser.
-- **Six languages.** English, 简体中文, 日本語, 한국어, Español, and Français switch instantly.
-- **No build step and no dependencies.** Plain HTML, CSS, and native ES modules.
+- **无需账号、无后端、无统计。** 所有计算都在浏览器本地完成。
+- **六种语言。** 英文、简体中文、日语、韩语、西班牙语和法语可即时切换。
+- **无需构建、无第三方依赖。** 只有原生 HTML、CSS 和 ES Modules。
 
-The interface combines an editorial reading experience with an interactive learning studio: a guided
-Google Search example, connected Canvas blocks, saved-versus-current Bridge scenarios, and two-form
-comparisons. Scenario and lesson state last only for the current page visit; they are not persisted.
+## 快速导览
 
-## Take the tour
+图谱共有十个章节，默认打开第一个章节「模型桥」。
 
-The atlas has ten sections. The first one, Bridge, opens by default.
-
-| Section | What you can do |
+| 章节 | 你可以做什么 |
 | --- | --- |
-| **01 Bridge** | Choose four business-model moves and see which organizational form they favor, where they strain, and what counterweight keeps them healthy. |
-| **02 Canvas** | Walk through the nine business-model blocks with an organizational lens. |
-| **03 Patterns** | Explore five recurring model patterns: unbundled, long tail, multi-sided, free, and open. |
-| **04 Design** | Start from a design epicenter, then follow the moves and questions that connect model to organization. |
-| **05 Cases** | Read real-company examples and jump straight into the matching Bridge scenario. |
-| **06 Atlas** | Place the four fundamental forms on a diamond map and inspect the three secondary forms. |
-| **07 Forms** | Read deep profiles of all seven forms: coordination engine, power pattern, conditions, risk, and examples. |
-| **08 Forces** | Raise the seven forces with sliders; the studio names the form they favor and the counterweight that contains it. |
-| **09 Change** | Follow life-cycle stages and common transition routes. |
-| **10 About** | Read the source, scope, and method behind the interpretation. |
+| **01 模型桥** | 选择客户、价值、经济与边界四个商业模式动作，查看它们偏向哪种组织形态、在哪里产生张力，以及用什么力量制衡。 |
+| **02 画布** | 用组织视角逐一走过商业模式的九个模块。 |
+| **03 模式** | 探索五种常见模式：解绑、长尾、多边平台、免费、开放。 |
+| **04 设计** | 从设计中心（客户、价值、资源或财务）出发，跟随问题把模式落到组织。 |
+| **05 案例** | 阅读真实公司案例，并直接跳到匹配的「模型桥」情境。 |
+| **06 结构图谱** | 在菱形图上定位四种基本形态，并查看三种次要形态。 |
+| **07 形态** | 深入阅读七种形态：协调机制、权力模式、适用条件、风险与实例。 |
+| **08 力量** | 用滑杆调高七种力量，工作台会指出它们偏向的形态以及制衡力量。 |
+| **09 变化** | 了解生命周期阶段与常见转型路径。 |
+| **10 关于** | 查看来源、范围与方法说明。 |
 
-## Quick start
+## 快速开始
 
-You need **Node.js 18+** or **Python 3** — only to serve static files. There is nothing to install or build.
+只需要 **Node.js 18+** 或 **Python 3** 来提供静态文件服务；无需安装依赖，也无需构建。
 
 ```bash
-# Recommended: built-in dependency-free Node server
+# 推荐：项目自带的零依赖 Node 服务器
 npm start
 ```
 
 ```bash
-# Alternative: Python's static server
+# 备选：Python 静态服务器
 python -m http.server 8765 --bind 127.0.0.1
 ```
 
-Open <http://127.0.0.1:8765/>. To stop the server, press `Ctrl+C`.
+打开 <http://127.0.0.1:8765/>。按 `Ctrl+C` 停止服务器。
 
-**Why a local server?** The application uses native ES modules. Browsers block module imports from
-`file://` pages for security reasons, so opening `index.html` by double-clicking will show an empty or
-broken page. Serving it over HTTP fixes that without changing the code.
+**为什么需要本地服务器？** 应用使用原生 ES Modules。浏览器出于安全原因会阻止 `file://` 页面加载
+模块，所以直接双击 `index.html` 会看到空白或报错页面。通过 HTTP 打开即可正常使用，不需要改动代码。
 
-If port 8765 is already in use:
+如果 8765 端口已被占用：
 
 ```bash
 PORT=9000 npm start
 ```
 
-On Windows PowerShell: `$env:PORT=9000; npm start`.
+Windows PowerShell 中写作：`$env:PORT=9000; npm start`。
 
-## Project structure
+## 项目结构
 
 ```text
-index.html                  Semantic markup and the single entry point
-package.json                Scripts only; no runtime dependencies
-styles/                     One stylesheet per layer or view
-  fonts.css                 @font-face declarations for nine local WOFF2 files
-  tokens.css                Colour, spacing, and typography variables
-  base.css                  Reset and document defaults; headings wrap naturally
-  layout.css                Header, navigation, language picker, view shell
-  atlas.css ... overrides.css  View-level styles, in source order
-assets/fonts/               Inter, Noto Sans SC/JP/KR subsets plus licence text
+index.html                  语义化结构，也是唯一入口
+package.json                仅包含脚本，无运行时依赖
+styles/                     按层或按视图拆分的样式表
+  fonts.css                 九份本地 WOFF2 字体的 @font-face
+  tokens.css                颜色、间距和排版变量
+  base.css                  重置、文档默认样式、标题自然换行
+  layout.css                页眉、导航、语言选择器、视图外壳
+  atlas.css ... overrides.css  各视图样式，保持源码顺序
+assets/fonts/               Inter、Noto Sans SC/JP/KR 子集及许可文本
 js/
-  app.js                    Composition root: init, language control, hash routing
-  core/html.js              HTML escaping and diagram rendering
-  i18n/                     Language metadata, translations, t(), localized labels
-  data/                     Pure data: forms, forces, stages, routes, bridge rules...
-  ui/                       One module per view; owns its state and rendering
+  app.js                    组合根：初始化、语言控制、hash 路由
+  core/html.js              HTML 转义与结构图渲染
+  i18n/                     语言元数据、翻译字典、t()、本地化标签
+  data/                     纯数据：形态、力量、阶段、路径、桥接规则……
+  ui/                       每个视图一个模块，各自持有状态并负责渲染
 scripts/
-  serve.mjs                 Dependency-free local static server
-  audit.mjs                 Structural, security, accessibility, and data audit
+  serve.mjs                 零依赖本地静态服务器
+  audit.mjs                 结构、安全、可访问性与数据审计
 ```
 
-## How it is built
+## 架构说明
 
-The modules form a one-way dependency chain:
+模块之间是单向依赖：
 
 ```text
 data  ->  i18n  ->  ui  ->  app.js
 ```
 
-- **`js/data/`** modules are leaves. They export plain objects and import nothing, so they are easy to
-  test, diff, and reuse.
-- **`js/i18n/`** owns the current language. Translation keys are the exact English source strings used in
-  the markup and data, so English never needs a lookup table and missing translations fall back safely.
-- **`js/ui/`** contains one module per view. Each module owns its own state and exports `renderXView()`
-  and `initXView()`. Cross-view actions go through a narrow API: for example, other views call
-  `applyBridgePreset()` rather than mutating bridge state directly.
-- **`js/app.js`** is the composition root. It wires modules together, renders in a fixed order, manages
-  the language selector, and handles `#bridge`, `#atlas`, and other deep links.
+- **`js/data/`** 是叶子模块，只导出普通对象，不导入任何模块，便于测试、审查和复用。
+- **`js/i18n/`** 持有当前语言。翻译键就是界面与数据中使用的英文原文，因此英文无需额外的查找表，
+  缺失翻译时会安全回退到英文。
+- **`js/ui/`** 每个视图一个模块，各自持有状态并导出 `renderXView()` 与 `initXView()`。跨视图操作
+  通过很窄的 API 完成，例如其他视图调用 `applyBridgePreset()`，而不是直接修改桥接状态。
+- **`js/app.js`** 是组合根：装配模块、按固定顺序渲染、管理语言选择器，并处理 `#bridge`、
+  `#atlas` 等深链。
 
-A few implementation notes:
+几个实现细节：
 
-- CSS files are linked in their original cascade order. `responsive.css` and `overrides.css` must stay
-  last.
-- The language preference is the only value stored in `localStorage`
-  (`organization-atlas-language`). Read and write failures are handled.
-- Navigation uses `history.replaceState`, so switching tabs does not flood browser history.
-- Headings wrap naturally across languages and viewport sizes. Reduced-motion preferences disable
-  interface transitions and smooth scrolling.
-- `js/data/learning.js` holds diagram captions, Canvas connections, and the guided example. The new
-  learning vocabulary is translated in `js/i18n/studio-translations.js`; the audit checks all five locales.
+- CSS 按原始层叠顺序引入；`responsive.css` 和 `overrides.css` 必须保持在最后。
+- 唯一持久化的值是 `localStorage` 中的语言偏好（键名 `organization-atlas-language`），读写失败
+  均有处理。
+- 导航使用 `history.replaceState`，切换标签不会污染浏览器历史。
+- 标题根据语言和视口宽度自然换行。界面支持减少动态效果的偏好设置。
+- 学习工作室提供 Google 搜索引导案例、画布模块关联、商业情境比较和两种组织形态对照。案例与比较状态仅在当前页面访问期间保留。
 
-## Common tasks
+## 常见任务
 
-**Change copy or domain data.** Edit the relevant file in `js/data/` or the text in `index.html`. The
-data files are plain objects, so no build step is involved.
+**修改文案或领域数据。** 编辑 `js/data/` 中对应的文件，或修改 `index.html` 中的文本。数据文件都是
+普通对象，不涉及构建步骤。
 
-**Add or correct a translation.** Find the English source string (the translation key) and add it to the
-matching locale in `js/i18n/translations.js`. For a one-off addition, follow the existing
-`Object.assign(translations.<locale>.strings, { ... })` pattern at the bottom of that file.
+**新增或修正翻译。** 找到英文原文（也就是翻译键），把它加到 `js/i18n/translations.js` 中对应语言的
+对象里。少量补充可以沿用文件末尾的 `Object.assign(translations.<语言>.strings, { ... })` 写法。
 
-**Add a language.** Add an entry to `js/i18n/languages.js`, add or assign a `translations.<locale>`
-object, and add an `<option>` to `#language-select` in `index.html`.
+**新增语言。** 在 `js/i18n/languages.js` 添加元数据，添加或赋值 `translations.<语言>` 对象，并在
+`index.html` 的 `#language-select` 中增加 `<option>`。
 
-**Add a form or a force.** Update the matching data module, add the corresponding markup controls, and
-extend the bridge and model-profile data. Run the audit afterwards; it checks foreign keys across all
-of these files.
+**新增形态或力量。** 更新对应数据模块，补上界面控件，并同步扩展桥接与商业模式档案数据。完成后运行
+审计；它会检查这些文件之间的外键一致性。
 
-## Quality checks
+## 质量检查
 
 ```bash
 npm run audit
 ```
 
-The audit is dependency-free and verifies:
+审计脚本零依赖，会验证：
 
-- Every JavaScript module parses, imports only relative paths, and the import graph is acyclic.
-- The page has exactly one external module script, no inline scripts or styles, and no inline event
-  handlers or `style` attributes.
-- The Content Security Policy is deny-by-default and contains no `unsafe-inline` or `unsafe-eval`.
-- Stylesheets load in the expected order, and every CSS `url()` target and WOFF2 font exists and is valid.
-- Element IDs are unique; every fragment, local link, and external HTTPS link is safe; external links use
-  `noopener noreferrer`.
-- Every DOM ID referenced from JavaScript exists in the markup.
-- Data foreign keys are consistent: forms, profiles, diagrams, forces, presets, bridge groups, bridge
-  presets, tension rules, patterns, stages, routes, canvas blocks, and design epicenters.
-- The main text palette meets WCAG AA contrast (4.5:1) on all three background colours.
-- All six README language versions are present.
+- 每个 JavaScript 模块都能解析、只使用相对导入，且导入图无环。
+- 页面只有一个外部 module 脚本，没有内联脚本/样式，也没有内联事件处理器或 `style` 属性。
+- CSP 为默认拒绝，且不包含 `unsafe-inline` 或 `unsafe-eval`。
+- 样式表加载顺序正确；所有 CSS `url()` 目标与 WOFF2 字体都存在且有效。
+- 元素 ID 唯一；所有锚点、本地链接和外部 HTTPS 链接安全；外链使用 `noopener noreferrer`。
+- JavaScript 引用的每个 DOM ID 都存在于 HTML 中。
+- 数据外键一致：形态、档案、结构图、力量、预设、桥接分组、桥接预设、张力规则、模式、阶段、路径、
+  画布模块与设计中心。
+- 主文本配色在三种背景上都满足 WCAG AA 对比度（4.5:1）。
+- 六种语言的 README 均存在。
 
-## Safety and privacy
+## 安全与隐私
 
-- The page makes **no network requests** and has no backend, analytics, cookies, forms, iframes, or
-  user-content ingestion.
-- The only persisted value is the selected language in `localStorage`.
-- External case and licence links open only after an explicit click and use
-  `rel="noopener noreferrer"`.
-- Dynamic HTML templates escape translated text. Structural SVG bodies remain trusted static source data.
-- The CSP blocks remote resources and all data connections. When serving publicly, add a
-  response-header CSP and `frame-ancestors 'none'` at the web server or CDN.
+- 页面**不发起任何网络请求**，没有后端、统计、Cookie、表单、iframe，也不接收用户内容。
+- 唯一持久化的值是 `localStorage` 中的语言选择。
+- 外部案例与许可链接只在用户主动点击后打开，并使用 `rel="noopener noreferrer"`。
+- 动态 HTML 模板会转义翻译文本；结构性 SVG 仍是可信的静态源码数据。
+- CSP 阻止远程资源与所有数据连接。若要公开部署，请在 Web 服务器或 CDN 上补充响应头 CSP 和
+  `frame-ancestors 'none'`。
 
-## Fonts and licences
+## 字体与许可
 
-The page bundles local WOFF2 subsets of **Inter** and **Noto Sans SC / JP / KR**. These fonts are
-licensed under the SIL Open Font License 1.1. Full attribution and licence text:
+页面内置 **Inter** 与 **Noto Sans SC / JP / KR** 的本地 WOFF2 子集，均采用 SIL Open Font
+License 1.1 授权。完整署名与许可文本见：
 
 - [`assets/fonts/FONT-LICENSES.txt`](assets/fonts/FONT-LICENSES.txt)
 
-No font is loaded from a third-party server.
+不会从第三方服务器加载任何字体。
 
-## Source and scope
+## 来源与范围
 
-This interface condenses chapters 2–21 of Henry Mintzberg, *Understanding Organizations...Finally!:
-Structure in Sevens* (Berrett-Koehler, 2023). It is an independent, interpretive overview. It does not
-reproduce the book, and it is not a validated diagnostic instrument. Treat every result as a hypothesis
-to test against real work, incentives, power, history, and customer evidence.
+本界面概括了亨利·明茨伯格《终于看懂组织：七种结构》（Berrett-Koehler，2023）第 2—21 章。它是一份
+独立的解读式概览，不复制原书，也不是经过验证的诊断工具。请把每个结果当作假设，再用真实工作、
+激励、权力、历史与客户证据去检验。
 
-## Browser support
+## 浏览器支持
 
-Current versions of Chrome, Edge, Firefox, and Safari. The app needs ES modules,
-`localStorage`, and modern CSS; it works offline once loaded.
+当前版本的 Chrome、Edge、Firefox 和 Safari。应用需要 ES Modules、
+`localStorage` 与现代 CSS；加载完成后可离线使用。
+
+## 开发者
+
+个人主页：[https://longway-li.pages.dev](https://longway-li.pages.dev)

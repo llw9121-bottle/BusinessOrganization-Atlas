@@ -1,6 +1,6 @@
 # Atlas de modelos de negocio × organización
 
-[English](README.md) · [简体中文](README.zh-CN.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · **Español** · [Français](README.fr.md)
+[English](README.en.md) · [简体中文](README.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · **Español** · [Français](README.fr.md)
 
 Un atlas interactivo que conecta las **decisiones de modelo de negocio** con las **formas
 organizativas, las fuerzas y las transiciones**. Es una guía de campo interpretativa de *Understanding

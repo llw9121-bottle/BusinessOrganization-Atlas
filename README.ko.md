@@ -1,6 +1,6 @@
 # 비즈니스 모델 × 조직 아틀라스
 
-[English](README.md) · [简体中文](README.zh-CN.md) · [日本語](README.ja.md) · **한국어** · [Español](README.es.md) · [Français](README.fr.md)
+[English](README.en.md) · [简体中文](README.md) · [日本語](README.ja.md) · **한국어** · [Español](README.es.md) · [Français](README.fr.md)
 
 **비즈니스 모델의 선택**과 **조직 형태·힘·변화**를 연결하는 인터랙티브 아틀라스입니다. 헨리
 민츠버그의 『Understanding Organizations...Finally!: Structure in Sevens』(Berrett-Koehler,

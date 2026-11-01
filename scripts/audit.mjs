@@ -372,7 +372,7 @@ assert.equal(Object.keys(translations.en.strings).length, 0, "English source str
 const i18nSource = readFileSync(resolve(projectRoot, "js/i18n/i18n.js"), "utf8");
 assert.match(i18nSource, /export function t\(source\)/, "Expected the t() helper.");
 
-const readmeLanguages = ["README.md", "README.zh-CN.md", "README.ja.md", "README.ko.md", "README.es.md", "README.fr.md"];
+const readmeLanguages = ["README.md", "README.en.md", "README.ja.md", "README.ko.md", "README.es.md", "README.fr.md"];
 for (const readme of readmeLanguages) {
     const readmePath = resolve(projectRoot, readme);
     assert.ok(existsSync(readmePath), `Missing README: ${readme}`);

@@ -1,6 +1,6 @@
 # ビジネスモデル × 組織アトラス
 
-[English](README.md) · [简体中文](README.zh-CN.md) · **日本語** · [한국어](README.ko.md) · [Español](README.es.md) · [Français](README.fr.md)
+[English](README.en.md) · [简体中文](README.md) · **日本語** · [한국어](README.ko.md) · [Español](README.es.md) · [Français](README.fr.md)
 
 **ビジネスモデルの選択**と**組織形態・力・変化**をつなぐインタラクティブなアトラスです。
 ヘンリー・ミンツバーグ『Understanding Organizations...Finally!: Structure in Sevens』

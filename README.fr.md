@@ -1,6 +1,6 @@
 # Atlas des modèles économiques × organisations
 
-[English](README.md) · [简体中文](README.zh-CN.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Español](README.es.md) · **Français**
+[English](README.en.md) · [简体中文](README.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Español](README.es.md) · **Français**
 
 Un atlas interactif qui relie les **choix de modèle économique** aux **formes organisationnelles, aux
 forces et aux transitions**. C'est un guide de terrain interprétatif de *Understanding

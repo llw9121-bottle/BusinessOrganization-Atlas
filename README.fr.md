@@ -16,15 +16,15 @@ pour qu'un autre modèle lui convienne ?
 
 ## Visite guidée
 
-L'atlas compte dix sections. La première, Passerelle, s'ouvre par défaut.
+L'atlas compte dix sections. La première, Entreprise → Org., s'ouvre par défaut.
 
 | Section | Ce que vous pouvez faire |
 | --- | --- |
-| **01 Passerelle** | Combinez quatre décisions de modèle (client, valeur, économie, frontière) et voyez quelle forme organisationnelle elles favorisent, où elles créent des tensions et quel contrepoids les maintient saines. |
+| **01 Entreprise → Org.** | Combinez quatre décisions de modèle (client, valeur, économie, frontière) et voyez quelle forme organisationnelle elles favorisent, où elles créent des tensions et quel contrepoids les maintient saines. |
 | **02 Canevas** | Parcourez les neuf blocs du modèle économique avec un regard organisationnel. |
 | **03 Modèles** | Explorez cinq modèles récurrents : désagrégé, longue traîne, multiface, gratuit et ouvert. |
 | **04 Conception** | Partez d'un épicentre de conception et suivez les décisions et questions qui relient modèle et organisation. |
-| **05 Cas** | Lisez des exemples d'entreprises réelles et sautez directement au scénario Passerelle correspondant. |
+| **05 Cas** | Lisez des exemples d'entreprises réelles et sautez directement au scénario Entreprise → Org. correspondant. |
 | **06 Atlas** | Placez les quatre formes fondamentales sur une carte en losange et examinez les trois formes secondaires. |
 | **07 Formes** | Lisez le profil détaillé des sept formes : moteur de coordination, pouvoir, conditions, risque et exemples. |
 | **08 Forces** | Montez les sept forces avec les curseurs ; le studio nomme la forme qu'elles favorisent et le contrepoids qui les contient. |

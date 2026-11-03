@@ -105,7 +105,7 @@ export function updateBridge() {
         (selectedBridgeOption(group).strains || []).includes(primary)
     );
     const fitState = preset?.fitState ||
-        (strainsPrimary ? "Needs a bridge" : calculated.spread <= 2 ? "Hybrid opportunity" : "Natural fit");
+        (strainsPrimary ? "Needs a combination" : calculated.spread <= 2 ? "Hybrid opportunity" : "Natural fit");
     const tensions = matchedBridgeTensions(activeBridgePreset, primary);
     currentResult = { primary, adjacent };
 
@@ -120,7 +120,7 @@ export function updateBridge() {
         structureSvg(primaryForm.diagram, t(`${primaryForm.name} structural signature`));
     document.getElementById("bridge-diagram-reading").textContent = t(formLearning[primary].diagram);
     document.getElementById("bridge-live-primary").textContent = t(primaryForm.name);
-    document.getElementById("bridge-live-adjacent").textContent = `${t("with")} ${t(adjacentForm.name)}`;
+    document.getElementById("bridge-live-adjacent").textContent = `${t("Pairs with")} ${t(adjacentForm.name)}`;
 
     const linkParts = [
         ["customer", "bridge-link-customer"],
@@ -145,7 +145,7 @@ export function updateBridge() {
     document.getElementById("bridge-whatif-text").textContent =
         t(tensions[0].whatIf || profile.whatIf);
     document.getElementById("bridge-announcement").textContent =
-        `${t(primaryForm.name)} ${t("with")} ${t(adjacentForm.name)}. ${t(fitState)}. ${t(tensions[0].title)}.`;
+        `${t(primaryForm.name)} ${t("Pairs with")} ${t(adjacentForm.name)}. ${t(fitState)}. ${t(tensions[0].title)}.`;
     renderScenarioComparison();
     applyStaticTranslations(document.getElementById("view-bridge"));
 }

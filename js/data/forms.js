@@ -115,7 +115,7 @@ export const forms = {
     conditions: "When conflict overwhelms the established authority, expertise, or culture; often a transitional state during necessary change.",
     risk: "Coordination is lost, resources are consumed by rivalry, and the arena can become destructive or prolonged by protected funding or monopoly.",
     examples: "Rival camps inside a company, a family firm split between siblings, prolonged institutional disputes, or a failing legacy organization.",
-    remember: "The Political Arena has constructive potential only as a bridge: it can dislodge an obsolete order or shorten a spent organization’s life.",
+    remember: "The Political Arena has constructive potential only as a transition: it can dislodge an obsolete order or shorten a spent organization’s life.",
     balance: "Conflict can force needed change; culture can contain it, but a workable and legitimate coordination mechanism has to be rebuilt."
   }
 };

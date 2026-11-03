@@ -14,20 +14,20 @@ why an organization works the way it does — and what would have to change for 
 - **No build step and no dependencies.** Plain HTML, CSS, and native ES modules.
 
 The interface combines an editorial reading experience with an interactive learning studio: a guided
-Google Search example, connected Canvas blocks, saved-versus-current Bridge scenarios, and two-form
+Google Search example, connected Canvas blocks, saved-versus-current Business → Org scenarios, and two-form
 comparisons. Scenario and lesson state last only for the current page visit; they are not persisted.
 
 ## Take the tour
 
-The atlas has ten sections. The first one, Bridge, opens by default.
+The atlas has ten sections. The first one, Business → Org, opens by default.
 
 | Section | What you can do |
 | --- | --- |
-| **01 Bridge** | Choose four business-model moves and see which organizational form they favor, where they strain, and what counterweight keeps them healthy. |
+| **01 Business → Org** | Choose four business-model moves and see which organizational form they favor, where they strain, and what balancing force keeps them healthy. |
 | **02 Canvas** | Walk through the nine business-model blocks with an organizational lens. |
 | **03 Patterns** | Explore five recurring model patterns: unbundled, long tail, multi-sided, free, and open. |
 | **04 Design** | Start from a design epicenter, then follow the moves and questions that connect model to organization. |
-| **05 Cases** | Read real-company examples and jump straight into the matching Bridge scenario. |
+| **05 Cases** | Read real-company examples and jump straight into the matching Business → Org scenario. |
 | **06 Atlas** | Place the four fundamental forms on a diamond map and inspect the three secondary forms. |
 | **07 Forms** | Read deep profiles of all seven forms: coordination engine, power pattern, conditions, risk, and examples. |
 | **08 Forces** | Raise the seven forces with sliders; the studio names the form they favor and the counterweight that contains it. |

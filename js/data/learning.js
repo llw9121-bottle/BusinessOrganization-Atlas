@@ -39,6 +39,6 @@ export const lessonNotes = {
     canvas: "Start with the value exchange: users search without a direct charge; advertisers fund the service.",
     bridge: "Follow the FREE pattern, then change one choice to explore your own variation of the example.",
     forms: "Compare standardized operations with expert teams. One enterprise can contain both forms.",
-    forces: "Explore efficiency and its counterweight. These sliders illustrate the framework; they do not measure Google.",
+    forces: "Explore efficiency and its balancing force. These sliders illustrate the framework; they do not measure Google.",
     other: "Keep the example in mind as you explore. Return to any step to reconnect the ideas."
 };

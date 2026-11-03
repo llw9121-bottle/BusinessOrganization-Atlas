@@ -16,15 +16,15 @@ encaje otro modelo.
 
 ## Recorrido
 
-El atlas tiene diez secciones. La primera, Puente, se abre por defecto.
+El atlas tiene diez secciones. La primera, Negocio → Org., se abre por defecto.
 
 | Sección | Qué puedes hacer |
 | --- | --- |
-| **01 Puente** | Combina cuatro decisiones de modelo (cliente, valor, economía y límite) y descubre qué forma organizativa favorecen, dónde generan tensión y qué contrapeso las mantiene sanas. |
+| **01 Negocio → Org.** | Combina cuatro decisiones de modelo (cliente, valor, economía y límite) y descubre qué forma organizativa favorecen, dónde generan tensión y qué contrapeso las mantiene sanas. |
 | **02 Lienzo** | Recorre los nueve bloques del modelo de negocio con una mirada organizativa. |
 | **03 Patrones** | Explora cinco patrones recurrentes: desagregado, cola larga, multilateral, gratuito y abierto. |
 | **04 Diseño** | Parte de un epicentro de diseño y sigue las decisiones y preguntas que unen modelo y organización. |
-| **05 Casos** | Lee ejemplos de empresas reales y salta al escenario correspondiente de Puente. |
+| **05 Casos** | Lee ejemplos de empresas reales y salta al escenario correspondiente de Negocio → Org.. |
 | **06 Atlas** | Sitúa las cuatro formas fundamentales en un mapa de diamante e inspecciona las tres formas secundarias. |
 | **07 Formas** | Lee perfiles profundos de las siete formas: motor de coordinación, poder, condiciones, riesgo y ejemplos. |
 | **08 Fuerzas** | Sube las siete fuerzas con los controles; el estudio nombra la forma que favorecen y el contrapeso que las contiene. |

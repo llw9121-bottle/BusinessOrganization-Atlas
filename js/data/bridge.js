@@ -122,7 +122,7 @@ export const bridgePresets = {
     selection: { customer: "segmented", value: "expertise", economics: "recurring", boundary: "mixed" },
     primary: "divisional",
     adjacent: "professional",
-    fitState: "Needs a bridge",
+    fitState: "Needs a combination",
     summary: "Separate relationship, innovation, and infrastructure businesses enough to protect their different economics without losing useful coordination.",
     tensionId: "unbundled_cultures"
   },
@@ -149,7 +149,7 @@ export const bridgePresets = {
     selection: { customer: "mass", value: "access_network", economics: "free_subsidy", boundary: "mixed" },
     primary: "programmed",
     adjacent: "community",
-    fitState: "Needs a bridge",
+    fitState: "Needs a combination",
     summary: "A paying operating core can support a free edge, but the subsidy logic must remain visible in who gets resources, voice, and protection.",
     tensionId: "subsidy_single"
   },
@@ -158,7 +158,7 @@ export const bridgePresets = {
     selection: { customer: "niche", value: "novelty", economics: "outcome_sharing", boundary: "open" },
     primary: "project",
     adjacent: "community",
-    fitState: "Needs a bridge",
+    fitState: "Needs a combination",
     summary: "Open value creation depends on fluid expert teams and strong governance of contributions, identity, and shared intellectual property.",
     tensionId: "open_owned"
   }

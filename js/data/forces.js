@@ -46,7 +46,7 @@ export const forces = {
     form: "political",
     anchor: "Culture",
     description: "The drive to contest power, priorities, and direction when legitimate systems no longer settle differences.",
-    containment: "Let culture contain destructive conflict, then rebuild a legitimate coordinating mechanism. An arena is a bridge, not a durable home."
+    containment: "Let culture contain destructive conflict, then rebuild a legitimate coordinating mechanism. An arena is a temporary stop, not a durable home."
   }
 };
 

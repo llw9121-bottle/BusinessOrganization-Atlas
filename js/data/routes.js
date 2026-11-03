@@ -44,7 +44,7 @@ export const routes = {
   "resistance-political": {
     eyebrow: "Blocked renewal",
     title: "Resistance into political arena",
-    summary: "When authority, expertise, or culture blocks necessary change, political games can create a bridge from one legitimate system to another. Politics can also accelerate the end of a spent organization.",
+    summary: "When authority, expertise, or culture blocks necessary change, political games can open a path from one legitimate system to another. Politics can also accelerate the end of a spent organization.",
     condition: "What makes it fit: legitimate channels have repeatedly failed. The constructive work is to rebuild coordination before the arena becomes permanent."
   }
 };

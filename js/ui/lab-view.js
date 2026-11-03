@@ -35,7 +35,7 @@ function updateLab(sourcePreset = null) {
     document.getElementById("lab-dominant").textContent = t(force.name);
     document.getElementById("lab-anchor").textContent = t(force.anchor);
     document.getElementById("mobile-lab-anchor").textContent =
-        `${t("Anchor with")}${language === "zh" || language === "ja" || language === "ko" ? "：" : " "}${localizedAnchors[language][force.anchor] || t(force.anchor).toLocaleLowerCase()}`;
+        `${t("Balance with")}${language === "zh" || language === "ja" || language === "ko" ? "：" : " "}${localizedAnchors[language][force.anchor] || t(force.anchor).toLocaleLowerCase()}`;
     document.getElementById("lab-anchor-copy").innerHTML =
         `<strong>${escapeHtml(t("Containment"))}</strong><br>${escapeHtml(t(force.containment))}`;
     document.getElementById("lab-diagram").innerHTML =

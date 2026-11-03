@@ -10,6 +10,7 @@ const bridgeMatchForms = ["personal", "programmed", "professional", "project", "
 const groupLabels = { customer: "Who do you serve?", value: "What must you excel at?", economics: "How is the work funded?", boundary: "Where does the work happen?" };
 let currentResult = null;
 let savedScenario = null;
+let pendingChange = null;
 
 let activeBridgePreset = "multi_sided";
 const bridgeSelection = {
@@ -107,7 +108,10 @@ export function updateBridge() {
     const fitState = preset?.fitState ||
         (strainsPrimary ? "Needs a combination" : calculated.spread <= 2 ? "Hybrid opportunity" : "Natural fit");
     const tensions = matchedBridgeTensions(activeBridgePreset, primary);
+    const previousResult = currentResult;
     currentResult = { primary, adjacent };
+    const change = pendingChange;
+    pendingChange = null;
 
     document.getElementById("bridge-plain").textContent = t(formLearning[primary].plain);
     document.getElementById("bridge-primary").textContent = t(primaryForm.name);
@@ -147,7 +151,37 @@ export function updateBridge() {
     document.getElementById("bridge-announcement").textContent =
         `${t(primaryForm.name)} ${t("Pairs with")} ${t(adjacentForm.name)}. ${t(fitState)}. ${t(tensions[0].title)}.`;
     renderScenarioComparison();
+    showChangeFeedback(change, previousResult);
     applyStaticTranslations(document.getElementById("view-bridge"));
+}
+
+// Only user-initiated option clicks pass a change; language switches re-render without one, so feedback clears.
+function showChangeFeedback(change, previousResult) {
+    const notes = document.querySelectorAll(".bridge-change-note");
+    const announcement = document.getElementById("bridge-announcement");
+    document.querySelectorAll(".bridge-impact").forEach((element) => { element.hidden = true; });
+    notes.forEach((note) => { note.hidden = true; });
+    if (!change || !previousResult) return;
+
+    const primaryChanged = previousResult.primary !== currentResult.primary;
+    const message = primaryChanged
+        ? `${t("Result changed")}: ${t(forms[previousResult.primary].name)} → ${t(forms[currentResult.primary].name)}`
+        : t("Same result, but the reasons and risks below were updated");
+    notes.forEach((note) => {
+        note.textContent = message;
+        note.hidden = false;
+    });
+    announcement.textContent = `${message}. ${announcement.textContent}`;
+
+    const impact = document.getElementById(`bridge-impact-${change.group}`);
+    impact.textContent = `${t("Effect of this choice")}: ${t(selectedBridgeOption(change.group).insight)}`;
+    impact.hidden = false;
+
+    const target = document.getElementById(primaryChanged ? "bridge-primary" : "bridge-tension-list");
+    target.classList.remove("is-updated");
+    void target.offsetWidth;
+    target.classList.add("is-updated");
+    window.setTimeout(() => target.classList.remove("is-updated"), 1400);
 }
 
 export function applyBridgePreset(presetKey) {
@@ -179,12 +213,15 @@ export function initBridgeView() {
     document.querySelectorAll("[data-bridge-option]").forEach((button) => {
         button.addEventListener("click", () => {
             bridgeSelection[button.dataset.bridgeGroup] = button.dataset.bridgeOption;
+            pendingChange = { group: button.dataset.bridgeGroup };
+            document.getElementById("bridge-hint").hidden = true;
             updateBridge();
         });
     });
 
     document.querySelectorAll("[data-bridge-preset]").forEach((button) => {
         button.addEventListener("click", () => {
+            document.getElementById("bridge-hint").hidden = true;
             applyBridgePreset(button.dataset.bridgePreset);
         });
     });

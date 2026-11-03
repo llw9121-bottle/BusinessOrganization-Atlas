@@ -410,7 +410,7 @@
           <span class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Business × Organization · An interactive field guide</span>
           <h1>How should your<br>business <em>organize?</em></h1>
           <p>Connect how you create value to how people work together. Explore the choices, understand the trade-offs, and find a structure that fits.</p>
-          <div class="studio-actions"><button class="studio-button primary" type="button" data-start-example>Explore an example <span aria-hidden="true">↗</span></button><a class="studio-button" href="#bridge-workspace">Build your scenario <span aria-hidden="true">↓</span></a></div>
+          <div class="studio-actions"><button class="studio-button primary" type="button" data-start-example>Explore an example <span aria-hidden="true">↗</span></button><a class="studio-button quiet" href="#bridge-workspace">Build your scenario <span aria-hidden="true">↓</span></a></div>
           <span class="hero-footnote">Nine model blocks. Seven organizational forms. One connected system.</span>
         </div>
         <div class="concept-flow" aria-label="Business choices lead to coordination needs, organizational forms, and trade-offs">
@@ -430,8 +430,16 @@
 
       <div class="workspace-heading" id="bridge-workspace"><div><span class="eyebrow">Try it yourself</span><h2>Change a choice.<br>See what follows.</h2></div><p>Choose who you serve, what you offer, how it is funded, and where the work happens. Follow the reasoning from each choice to a possible structure.</p></div>
 
+      <ol class="bridge-steps" aria-label="How to use this page">
+        <li><span class="path-number">1</span><span><strong>Choose</strong><small>Pick one option in each of the four questions</small></span></li>
+        <li><span class="path-number">2</span><span><strong>Read the result</strong><small>The suggested organization updates instantly</small></span></li>
+        <li><span class="path-number">3</span><span><strong>Go deeper</strong><small>Follow the reasoning or open the form</small></span></li>
+      </ol>
+
       <div class="bridge-layout">
         <div class="bridge-controls">
+          <h3 class="bridge-column-title">Your business choices</h3>
+          <p class="bridge-hint" id="bridge-hint">Try clicking a different option and watch the result change.</p>
           <div class="preset-block">
             <span class="preset-label">Start from a common business model</span>
             <div class="preset-row">
@@ -448,6 +456,7 @@
             <span>Your result</span>
             <strong id="bridge-live-primary">Programmed Machine</strong>
             <small id="bridge-live-adjacent">Pairs with Divisional Form</small>
+            <p class="bridge-change-note" data-no-translate hidden></p>
             <a href="#bridge-result">See reasoning ↓</a>
           </div>
 
@@ -461,6 +470,7 @@
               <button class="bridge-option" type="button" data-bridge-group="customer" data-bridge-option="diversified" aria-pressed="false">Diversified</button>
               <button class="bridge-option" type="button" data-bridge-group="customer" data-bridge-option="multi_sided" aria-pressed="true">Multi-sided</button>
             </div>
+            <p class="bridge-impact" id="bridge-impact-customer" data-no-translate hidden></p>
           </fieldset>
 
           <fieldset class="bridge-group">
@@ -473,6 +483,7 @@
               <button class="bridge-option" type="button" data-bridge-group="value" data-bridge-option="access_network" aria-pressed="true">Access and network</button>
               <button class="bridge-option" type="button" data-bridge-group="value" data-bridge-option="identity_community" aria-pressed="false">Identity and community</button>
             </div>
+            <p class="bridge-impact" id="bridge-impact-value" data-no-translate hidden></p>
           </fieldset>
 
           <fieldset class="bridge-group">
@@ -485,6 +496,7 @@
               <button class="bridge-option" type="button" data-bridge-group="economics" data-bridge-option="outcome_sharing" aria-pressed="false">Outcome and risk sharing</button>
               <button class="bridge-option" type="button" data-bridge-group="economics" data-bridge-option="membership_mission" aria-pressed="false">Membership / mission</button>
             </div>
+            <p class="bridge-impact" id="bridge-impact-economics" data-no-translate hidden></p>
           </fieldset>
 
           <fieldset class="bridge-group">
@@ -496,6 +508,7 @@
               <button class="bridge-option" type="button" data-bridge-group="boundary" data-bridge-option="networked" aria-pressed="false">Outsourced / networked</button>
               <button class="bridge-option" type="button" data-bridge-group="boundary" data-bridge-option="open" aria-pressed="true">Open ecosystem</button>
             </div>
+            <p class="bridge-impact" id="bridge-impact-boundary" data-no-translate hidden></p>
           </fieldset>
 
           <button class="bridge-reset" id="bridge-reset" type="button">Reset to multi-sided platform</button>
@@ -506,6 +519,7 @@
         <aside class="bridge-result" id="bridge-result">
           <span class="sr-only" id="bridge-announcement" aria-live="polite"></span>
           <div class="bridge-result-head">
+            <p class="bridge-change-note" data-no-translate hidden></p>
             <span class="bridge-night-eyebrow">A possible way to organize</span>
             <p class="bridge-plain" id="bridge-plain"></p>
             <h2 id="bridge-primary">Programmed Machine</h2>

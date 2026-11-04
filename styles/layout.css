@@ -6,8 +6,8 @@ margin-inline: auto;
 position: sticky;
 top: 0;
 z-index: 30;
-border-bottom: 1px solid rgba(170, 163, 151, 0.7);
-background: rgba(243, 239, 230, 0.92);
+border-bottom: 1px solid rgba(141, 152, 166, 0.7);
+background: rgba(231, 234, 238, 0.94);
 backdrop-filter: blur(14px);
 }
 .masthead-inner {
@@ -29,10 +29,10 @@ height: 42px;
 display: grid;
 place-items: center;
 border: 1px solid var(--ink);
-border-radius: 50%;
-font-family: var(--sans);
+border-radius: var(--radius);
+font-family: var(--mono);
 font-size: 0.72rem;
-letter-spacing: -0.03em;
+letter-spacing: 0;
 line-height: 1;
 }
 .brand-copy {
@@ -48,7 +48,7 @@ font-weight: 400;
 margin-top: 0.2rem;
 color: var(--muted);
 font-family: var(--mono);
-font-size: 0.62rem;
+font-size: 0.75rem;
 letter-spacing: 0.12em;
 text-transform: uppercase;
 }
@@ -73,7 +73,7 @@ align-items: center;
 gap: 0.45rem;
 color: var(--muted);
 font-family: var(--mono);
-font-size: 0.58rem;
+font-size: 0.75rem;
 letter-spacing: 0.08em;
 text-transform: uppercase;
 }
@@ -175,7 +175,7 @@ transform: translateY(-6px) rotate(-45deg);
 .nav-index {
 color: var(--accent);
 font-family: var(--mono);
-font-size: 0.64rem;
+font-size: 0.75rem;
 vertical-align: top;
 }
 main {

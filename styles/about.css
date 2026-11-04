@@ -23,7 +23,7 @@ padding-right: 0;
 .about-step > span {
 color: var(--accent);
 font-family: var(--mono);
-font-size: 0.58rem;
+font-size: 0.75rem;
 letter-spacing: 0.08em;
 }
 .about-step h3 {
@@ -64,12 +64,12 @@ cursor: pointer;
 text-align: left;
 }
 .about-page-link:hover {
-background: rgba(184, 82, 56, 0.06);
+background: rgba(176, 42, 30, 0.06);
 }
 .about-page-link span {
 color: var(--muted);
 font-family: var(--mono);
-font-size: 0.54rem;
+font-size: 0.75rem;
 letter-spacing: 0.08em;
 }
 .about-page-link strong {
@@ -82,7 +82,7 @@ font-weight: 400;
 .about-page-link p {
 margin-top: 0.3rem;
 color: var(--ink-soft);
-font-size: 0.73rem;
+font-size: 0.75rem;
 line-height: 1.42;
 }
 .about-page-link:nth-child(9) {
@@ -102,7 +102,7 @@ font-size: clamp(2rem, 3.5vw, 3rem);
 }
 .about-note > p {
 margin-top: 0.8rem;
-color: #d1ddd8;
+color: #aeb8c4;
 font-family: var(--serif);
 font-size: 1rem;
 line-height: 1.48;
@@ -117,7 +117,7 @@ list-style: none;
 .about-note li {
 padding-top: 0.6rem;
 border-top: 1px solid rgba(255, 255, 255, 0.16);
-color: #d1ddd8;
+color: #aeb8c4;
 font-size: 0.78rem;
 line-height: 1.45;
 }
@@ -142,6 +142,6 @@ margin-top: 2rem;
 padding-top: 1rem;
 border-top: 1px solid var(--line);
 color: var(--muted);
-font-size: 0.74rem;
+font-size: 0.75rem;
 line-height: 1.5;
 }

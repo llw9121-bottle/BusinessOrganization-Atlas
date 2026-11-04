@@ -44,7 +44,7 @@ overflow: auto;
 background: var(--paper-deep);
 color: var(--ink-soft);
 font-family: var(--sans);
-font-size: 0.68rem;
+font-size: 0.8125rem;
 line-height: 1.45;
 white-space: pre-wrap;
 }

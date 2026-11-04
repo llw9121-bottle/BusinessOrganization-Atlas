@@ -35,7 +35,7 @@ line-height: 1.15;
 max-width: 58ch;
 margin-top: 0.3rem;
 color: var(--muted);
-font-size: 0.74rem;
+font-size: 0.75rem;
 line-height: 1.4;
 }
 .bridge-options {
@@ -56,7 +56,7 @@ text-align: left;
 }
 .bridge-option:hover {
 border-color: var(--accent);
-background: rgba(184, 82, 56, 0.06);
+background: rgba(176, 42, 30, 0.06);
 }
 .bridge-option[aria-pressed="true"] {
 border-color: var(--dark);
@@ -86,13 +86,6 @@ padding: clamp(1.25rem, 2.6vw, 2.1rem);
 background: var(--dark);
 color: var(--light);
 }
-.bridge-night-eyebrow {
-color: #e8ad95;
-font-family: var(--mono);
-font-size: 0.61rem;
-letter-spacing: 0.1em;
-text-transform: uppercase;
-}
 .bridge-result-head h2 {
 margin-top: 0.45rem;
 font-size: clamp(2.3rem, 4vw, 3.8rem);
@@ -102,16 +95,16 @@ display: inline-flex;
 margin-top: 0.75rem;
 padding: 0.25rem 0.48rem;
 border: 1px solid rgba(255, 255, 255, 0.34);
-color: #dce5e1;
+color: #b7c2cd;
 font-family: var(--mono);
-font-size: 0.56rem;
+font-size: 0.75rem;
 letter-spacing: 0.07em;
 text-transform: uppercase;
 }
 .bridge-fit-summary {
 max-width: 58ch;
 margin-top: 0.85rem;
-color: #d2ddd8;
+color: #b0bbc6;
 font-family: var(--serif);
 font-size: 1.04rem;
 line-height: 1.45;
@@ -131,10 +124,10 @@ color: var(--light);
 }
 .bridge-meta-item span {
 display: block;
-color: #9eacA6;
-color: #9eaca6;
+color: #7c8894;
+color: #7c8894;
 font-family: var(--mono);
-font-size: 0.55rem;
+font-size: 0.75rem;
 letter-spacing: 0.08em;
 text-transform: uppercase;
 }
@@ -160,7 +153,7 @@ padding: 1.1rem clamp(1.25rem, 2.6vw, 2.1rem);
 .bridge-section-label {
 color: var(--accent-deep);
 font-family: var(--mono);
-font-size: 0.58rem;
+font-size: 0.75rem;
 letter-spacing: 0.09em;
 text-transform: uppercase;
 }
@@ -178,14 +171,14 @@ border-bottom: 1px solid var(--line);
 .bridge-link-row dt {
 color: var(--muted);
 font-family: var(--mono);
-font-size: 0.55rem;
+font-size: 0.75rem;
 letter-spacing: 0.06em;
 text-transform: uppercase;
 }
 .bridge-link-row dd {
 margin: 0;
 color: var(--ink-soft);
-font-size: 0.74rem;
+font-size: 0.75rem;
 line-height: 1.4;
 }
 .bridge-link-row dd strong {
@@ -199,7 +192,7 @@ font-weight: 400;
 .bridge-tensions {
 padding: 1rem clamp(1.25rem, 2.6vw, 2.1rem) 1.2rem;
 border-top: 1px solid var(--line);
-background: rgba(233, 226, 213, 0.52);
+background: rgba(219, 224, 230, 0.55);
 }
 .bridge-tension-list {
 display: grid;
@@ -231,7 +224,7 @@ color: var(--teal);
 .bridge-experiment {
 padding: 1rem clamp(1.25rem, 2.6vw, 2.1rem);
 border-top: 1px solid var(--line);
-background: rgba(50, 108, 99, 0.07);
+background: rgba(31, 92, 138, 0.07);
 }
 .bridge-experiment p {
 max-width: 54ch;
@@ -292,7 +285,7 @@ border-right: 0;
 display: block;
 color: var(--muted);
 font-family: var(--mono);
-font-size: 0.54rem;
+font-size: 0.75rem;
 letter-spacing: 0.07em;
 text-transform: uppercase;
 }
@@ -313,7 +306,7 @@ border-bottom: 1px solid var(--line-strong);
 .model-tension > span {
 color: var(--accent-deep);
 font-family: var(--mono);
-font-size: 0.56rem;
+font-size: 0.75rem;
 letter-spacing: 0.08em;
 text-transform: uppercase;
 }
@@ -338,11 +331,11 @@ color: var(--light);
 }
 
 .bridge-steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin: 1.5rem 0 0; padding: 0; list-style: none; }
-.bridge-steps li { display: flex; align-items: center; gap: .8rem; padding: .8rem 1rem; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+.bridge-steps li { display: flex; align-items: center; gap: .8rem; padding: .8rem 1rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
 .bridge-steps strong { display: block; font-size: .9375rem; font-weight: 500; }
 .bridge-steps small { display: block; margin-top: .2rem; font-size: .75rem; color: var(--muted); }
 .bridge-column-title { margin: 0 0 .35rem; font-size: .75rem; font-weight: 500; letter-spacing: .02em; color: var(--accent-deep); }
-.bridge-hint { margin: 0 0 1rem; padding: .55rem .8rem; border-left: 3px solid var(--accent); border-radius: 0 8px 8px 0; background: var(--accent-soft); font-size: .8125rem; color: var(--accent-deep); }
+.bridge-hint { margin: 0 0 1rem; padding: .55rem .8rem; border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--accent-soft); font-size: .8125rem; color: var(--accent-deep); }
 .bridge-hint[hidden], .bridge-impact[hidden], .bridge-change-note[hidden] { display: none; }
 .bridge-impact { margin-top: .75rem; padding: .55rem .8rem; border-radius: 8px; background: var(--accent-soft); font-size: .8125rem; line-height: 1.5; color: var(--ink-soft); }
 .bridge-change-note { grid-column: 1 / -1; margin: .35rem 0 0; font-size: .8125rem; font-weight: 500; color: var(--accent-deep); }
@@ -351,3 +344,33 @@ color: var(--light);
 @keyframes bridge-flash { 0% { background-color: var(--accent-soft); box-shadow: 0 0 0 6px var(--accent-soft); } 100% { background-color: transparent; box-shadow: 0 0 0 6px transparent; } }
 @media (max-width: 680px) { .bridge-steps { grid-template-columns: 1fr; gap: .5rem; } }
 @media (prefers-reduced-motion: reduce) { .is-updated { animation: none; background-color: var(--accent-soft); } }
+
+/* Structural resolution: loads feed a reaction member that distributes to ranked frames. */
+.bridge-structure { padding: 1.25rem 1.4rem 0.25rem; background: var(--paper); border-bottom: 1px solid var(--line); }
+.structure-resolution { display: block; width: 100%; height: auto; }
+.structure-resolution .load-arrow { fill: none; stroke: var(--accent); stroke-width: 1.5; }
+.structure-resolution .reaction-member { fill: none; stroke: var(--teal); stroke-width: 2.5; }
+.structure-resolution .reaction-node { fill: var(--teal); }
+.structure-resolution .support-link { fill: none; stroke: var(--line-strong); stroke-width: 1; }
+.structure-resolution .support-link.is-primary { stroke: var(--accent); stroke-width: 2; }
+.structure-resolution .support-link.is-adjacent { stroke: var(--teal); stroke-width: 1.5; }
+.structure-resolution .slot-frame { fill: var(--surface); stroke: var(--line-strong); stroke-width: 1; }
+.structure-resolution .frame-slot.is-primary .slot-frame { stroke: var(--accent); }
+.structure-resolution .frame-slot.is-adjacent .slot-frame { stroke: var(--teal); }
+.structure-resolution .rank { font-family: var(--mono); font-size: 11px; font-weight: 700; fill: var(--muted); }
+.structure-resolution .frame-slot.is-primary .rank { fill: var(--accent-deep); }
+.structure-resolution .frame-slot.is-adjacent .rank { fill: var(--teal); }
+.structure-resolution .score-track { fill: var(--paper-deep); }
+.structure-resolution .score-fill { fill: var(--line-strong); }
+.structure-resolution .frame-slot.is-primary .score-fill { fill: var(--accent); }
+.structure-resolution .frame-slot.is-adjacent .score-fill { fill: var(--teal); }
+.structure-resolution .frame-glyph .guide { fill: none; stroke: var(--line-strong); stroke-width: 1.2; vector-effect: non-scaling-stroke; }
+.structure-resolution .frame-glyph .guide-soft { fill: none; stroke: var(--line); stroke-width: 1; stroke-dasharray: 4 6; vector-effect: non-scaling-stroke; }
+.structure-resolution .frame-glyph .mark-fill { fill: var(--accent); stroke: none; }
+.structure-resolution .frame-glyph .mark-soft { fill: var(--paper-deep); stroke: var(--line-strong); stroke-width: 1; vector-effect: non-scaling-stroke; }
+.structure-resolution .frame-glyph .accent-line { fill: none; stroke: var(--accent); stroke-width: 1.4; vector-effect: non-scaling-stroke; }
+.structure-resolution .frame-glyph text { display: none; }
+.structure-resolution .frame-slot.is-adjacent .frame-glyph .mark-fill { fill: var(--teal); }
+.structure-resolution .frame-slot.is-adjacent .frame-glyph .accent-line { stroke: var(--teal); }
+.structure-resolution .frame-slot.is-candidate .frame-glyph .mark-fill { fill: var(--line-strong); }
+.structure-resolution .frame-slot.is-candidate .frame-glyph .accent-line { stroke: var(--line-strong); }

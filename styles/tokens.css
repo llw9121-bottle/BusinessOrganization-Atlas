@@ -1,26 +1,42 @@
 :root {
 color-scheme: light;
---paper: #f7f8fc;
---paper-deep: #eef0fa;
---surface: #ffffff;
---ink: #182230;
---ink-soft: #48556a;
---muted: #5b6578;
---line: #dfe4ee;
---line-strong: #bac4d6;
---accent: #3e55e8;
---accent-deep: #3449d2;
---teal: #24645c;
---gold: #946318;
---dark: #192442;
+/* Drafting paper (light) and ink. Audited foregrounds must hold >=4.5:1 on every background. */
+--paper: #e7eaee;
+--paper-deep: #dbe0e6;
+--surface: #f5f6f8;
+--ink: #16181d;
+--ink-soft: #3c434c;
+--muted: #535b65;
+--line: #c3cad3;
+--line-strong: #8d98a6;
+/* Signal red = load / tension. */
+--accent: #b02a1e;
+--accent-deep: #8c2016;
+--accent-soft: #f4e3df;
+/* Structural steel blue = members / fit / balance. */
+--teal: #1f5c8a;
+/* Amber = warning / degraded state. */
+--gold: #8a5a00;
+/* Blueprint dark panels. */
+--dark: #12181f;
 --light: #ffffff;
---radius: 16px;
---accent-soft: #edf0ff;
+/* Drafting corners are near-square; depth comes from line weight, not soft shadow. */
+--radius: 4px;
+--radius-sm: 2px;
+--radius-lg: 8px;
+--shadow: 0 1px 0 rgba(18, 24, 31, 0.05);
+--shadow-lift: 0 2px 0 rgba(18, 24, 31, 0.06), 0 0 0 1px var(--line);
+--space-1: 4px;
+--space-2: 8px;
+--space-3: 12px;
+--space-4: 16px;
+--space-5: 24px;
+--space-6: 32px;
+--space-7: 48px;
 --cjk: "Noto Sans SC", "Noto Sans SC B";
---serif: "Inter", var(--cjk), sans-serif;
+--serif: "Archivo", var(--cjk), sans-serif;
 --sans: "Inter", var(--cjk), sans-serif;
---mono: "Inter", var(--cjk), sans-serif;
---shadow: 0 12px 36px rgba(31, 47, 91, 0.055);
+--mono: "JetBrains Mono", var(--cjk), monospace;
 --content: 1320px;
 --map-note: "FIT IS A MOVING TARGET";
 --secondary-note: "THREE FORMS OUTSIDE THE DIAMOND";

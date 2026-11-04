@@ -26,7 +26,7 @@ line-height: 1.18;
 .design-epicenter span {
 color: var(--muted);
 font-family: var(--mono);
-font-size: 0.56rem;
+font-size: 0.75rem;
 }
 .design-epicenter[aria-pressed="true"] {
 color: var(--accent-deep);
@@ -47,7 +47,7 @@ font-size: clamp(2rem, 3.6vw, 3.4rem);
 }
 .design-detail-head p {
 margin-top: 0.65rem;
-color: #d1ddd8;
+color: #aeb8c4;
 font-family: var(--serif);
 font-size: 1rem;
 line-height: 1.45;
@@ -64,13 +64,13 @@ border-right: 1px solid var(--line);
 }
 .design-detail-body section:last-child {
 border-right: 0;
-background: rgba(50, 108, 99, 0.06);
+background: rgba(31, 92, 138, 0.06);
 }
 .design-detail-body h3,
 .design-section-title {
 color: var(--accent-deep);
 font-family: var(--mono);
-font-size: 0.58rem;
+font-size: 0.75rem;
 font-weight: 500;
 letter-spacing: 0.08em;
 text-transform: uppercase;
@@ -105,7 +105,7 @@ border-right: 0;
 .design-step span {
 color: var(--accent);
 font-family: var(--mono);
-font-size: 0.56rem;
+font-size: 0.75rem;
 letter-spacing: 0.08em;
 }
 .design-step h3 {
@@ -116,7 +116,7 @@ font-size: 1.04rem;
 .design-step p {
 margin-top: 0.35rem;
 color: var(--ink-soft);
-font-size: 0.74rem;
+font-size: 0.75rem;
 line-height: 1.45;
 }
 .design-forces {
@@ -135,7 +135,7 @@ border-right: 0;
 }
 .design-force h3 {
 font-family: var(--sans);
-font-size: 0.62rem;
+font-size: 0.75rem;
 font-weight: 500;
 letter-spacing: 0.08em;
 text-transform: uppercase;

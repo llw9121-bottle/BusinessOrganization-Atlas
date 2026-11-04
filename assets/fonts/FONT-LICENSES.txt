@@ -19,6 +19,14 @@ Noto Sans KR
 Copyright 2014-2021 Adobe (http://www.adobe.com/), with Reserved Font Name "Source".
 Source: https://github.com/notofonts/noto-cjk
 
+Archivo
+Copyright 2019 The Archivo Project Authors (https://github.com/Omnibus-Type/Archivo)
+Source: https://github.com/Omnibus-Type/Archivo
+
+JetBrains Mono
+Copyright 2020 The JetBrains Mono Project Authors (https://github.com/JetBrains/JetBrainsMono)
+Source: https://github.com/JetBrains/JetBrainsMono
+
 All bundled fonts are licensed under the SIL Open Font License, Version 1.1.
 The OFL permits the fonts to be used, studied, copied, embedded, modified,
 and redistributed, provided that the fonts are not sold by themselves and

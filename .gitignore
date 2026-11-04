@@ -5,3 +5,7 @@ node_modules/
 .env.*
 .DS_Store
 Thumbs.db
+
+# Impeccable tooling: keep design.json + surface briefs, drop transient review artifacts.
+.impeccable/review/
+.impeccable/hook.cache.json

@@ -4,6 +4,7 @@ import { modelProfiles } from "../data/model-profiles.js";
 import { bridgeGroups, bridgePresets, bridgeTensionRules } from "../data/bridge.js";
 import { applyStaticTranslations, t } from "../i18n/i18n.js";
 import { escapeHtml, structureSvg } from "../core/html.js";
+import { diagrams } from "../data/diagrams.js";
 
 const bridgeGroupOrder = ["customer", "value", "economics", "boundary"];
 const bridgeMatchForms = ["personal", "programmed", "professional", "project", "divisional", "community"];
@@ -71,6 +72,62 @@ function matchedBridgeTensions(presetKey, primary) {
     return matches.slice(0, 2);
 }
 
+function structureResolutionSvg(ranked, maxScore) {
+    const loadYs = [40, 72, 104, 136];
+    const slotYs = [36, 92, 148];
+    const slotH = 48;
+    const centers = slotYs.map((y) => y + slotH / 2);
+    const stateOf = (index) => (index === 0 ? "is-primary" : index === 1 ? "is-adjacent" : "is-candidate");
+
+    const loads = loadYs
+        .map((y) => `<path class="load-arrow" d="M14 ${y} H92 M92 ${y} L84 ${y - 4} M92 ${y} L84 ${y + 4}"/>`)
+        .join("");
+    const memberNodes = loadYs.map((y) => `<circle class="reaction-node" cx="106" cy="${y}" r="2.5"/>`).join("");
+    const links = ranked
+        .map((item, index) => `<path class="support-link ${stateOf(index)}" d="M106 ${centers[index]} H150"/>`)
+        .join("");
+    const slots = ranked
+        .map((item, index) => {
+            const { formKey, value } = item;
+            const slotY = slotYs[index];
+            const barW = Math.max(8, Math.round(130 * value / maxScore));
+            return `<g class="frame-slot ${stateOf(index)}">` +
+                `<rect class="slot-frame" x="150" y="${slotY}" width="238" height="${slotH}" rx="4"/>` +
+                `<text class="rank" x="166" y="${slotY + 26}" text-anchor="middle">${index + 1}</text>` +
+                `<g class="frame-glyph" transform="translate(180, ${slotY + 6}) scale(0.14)">${diagrams[formKey]}</g>` +
+                `<rect class="score-track" x="252" y="${slotY + 20}" width="130" height="4"/>` +
+                `<rect class="score-fill" x="252" y="${slotY + 20}" width="${barW}" height="4"/>` +
+                `</g>`;
+        })
+        .join("");
+
+    return `<svg class="structure-resolution" viewBox="0 0 400 220" role="img" aria-label="Structural resolution">` +
+        `<title>Structural resolution</title>` +
+        `<path class="reaction-member" d="M106 40 V172"/>` +
+        memberNodes +
+        loads +
+        links +
+        slots +
+        `</svg>`;
+}
+
+function renderStructureResolution(primary, adjacent) {
+    const container = document.getElementById("bridge-structure-diagram");
+    if (!container) return;
+    const scores = Object.fromEntries(bridgeMatchForms.map((formKey) => [formKey, 0]));
+    bridgeGroupOrder.forEach((group) => {
+        Object.entries(selectedBridgeOption(group).supports || {}).forEach(([formKey, value]) => {
+            if (scores[formKey] !== undefined) scores[formKey] += value;
+        });
+    });
+    const rest = bridgeMatchForms
+        .filter((formKey) => formKey !== primary && formKey !== adjacent)
+        .sort((a, b) => scores[b] - scores[a]);
+    const ranked = [primary, adjacent, ...rest].slice(0, 3).map((formKey) => ({ formKey, value: scores[formKey] }));
+    const maxScore = Math.max(1, ...ranked.map((item) => item.value));
+    container.innerHTML = structureResolutionSvg(ranked, maxScore);
+}
+
 function renderScenarioComparison() {
     const panel = document.getElementById("scenario-comparison");
     panel.hidden = !savedScenario;
@@ -123,6 +180,7 @@ export function updateBridge() {
     document.getElementById("bridge-diagram").innerHTML =
         structureSvg(primaryForm.diagram, t(`${primaryForm.name} structural signature`));
     document.getElementById("bridge-diagram-reading").textContent = t(formLearning[primary].diagram);
+    renderStructureResolution(primary, adjacent);
     document.getElementById("bridge-live-primary").textContent = t(primaryForm.name);
     document.getElementById("bridge-live-adjacent").textContent = `${t("Pairs with")} ${t(adjacentForm.name)}`;
 

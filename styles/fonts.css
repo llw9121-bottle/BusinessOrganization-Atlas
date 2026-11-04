@@ -4,6 +4,8 @@ Typography is licensed under the SIL Open Font License 1.1.
 Noto Sans SC: Copyright 2014-2021 Adobe, Reserved Font Name "Source".
   Noto Sans JP: Copyright 2014-2021 Adobe, Reserved Font Name "Source".
   Noto Sans KR: Copyright 2014-2021 Adobe, Reserved Font Name "Source".
+  Archivo: Copyright 2019 The Archivo Project Authors.
+  JetBrains Mono: Copyright 2020 The JetBrains Mono Project Authors.
 Full attribution and license: assets/fonts/FONT-LICENSES.txt
 */
 @font-face {
@@ -76,4 +78,20 @@ font-style: normal;
 font-weight: 400 500;
 font-display: swap;
 src: url("../assets/fonts/noto-sans-kr-b.woff2") format("woff2");
+}
+
+@font-face {
+font-family: "Archivo";
+font-style: normal;
+font-weight: 400 700;
+font-display: swap;
+src: url("../assets/fonts/archivo.woff2") format("woff2");
+}
+
+@font-face {
+font-family: "JetBrains Mono";
+font-style: normal;
+font-weight: 400 700;
+font-display: swap;
+src: url("../assets/fonts/jetbrains-mono.woff2") format("woff2");
 }

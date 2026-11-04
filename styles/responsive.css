@@ -89,12 +89,12 @@ gap: 0.25rem 1rem;
 margin-top: 1rem;
 padding: 0.8rem 0.9rem;
 border: 1px solid var(--line);
-background: rgba(251, 248, 241, 0.55);
+background: rgba(231, 234, 238, 0.6);
 }
 .bridge-live-summary span {
 color: var(--muted);
 font-family: var(--mono);
-font-size: 0.55rem;
+font-size: 0.75rem;
 letter-spacing: 0.08em;
 text-transform: uppercase;
 }
@@ -189,12 +189,12 @@ gap: 0.25rem 1rem;
 margin-top: 1rem;
 padding: 0.8rem 0.9rem;
 border: 1px solid var(--line);
-background: rgba(251, 248, 241, 0.55);
+background: rgba(231, 234, 238, 0.6);
 }
 .mobile-lab-summary span {
 color: var(--muted);
 font-family: var(--mono);
-font-size: 0.55rem;
+font-size: 0.75rem;
 letter-spacing: 0.08em;
 text-transform: uppercase;
 }
@@ -277,7 +277,7 @@ width: 100%;
 min-width: 0;
 min-height: 36px;
 padding: 0.42rem 0.12rem;
-font-size: 0.66rem;
+font-size: 0.75rem;
 line-height: 1.15;
 white-space: normal;
 }
@@ -310,7 +310,7 @@ padding: 0.42rem 0.5rem;
 font-size: 0.82rem;
 }
 .map-node small {
-font-size: 0.49rem;
+font-size: 0.75rem;
 }
 .map-center {
 width: 122px;
@@ -319,10 +319,10 @@ width: 122px;
 font-size: 0.86rem;
 }
 .map-center small {
-font-size: 0.46rem;
+font-size: 0.75rem;
 }
 .map-svg .axis-copy {
-font-size: 10px;
+font-size: 11px;
 }
 .secondary-forms {
 grid-template-columns: 1fr;

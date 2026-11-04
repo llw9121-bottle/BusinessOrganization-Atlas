@@ -8,8 +8,6 @@ let activePattern = "unbundled";
 function updatePattern(patternKey) {
     activePattern = patternKey;
     const pattern = businessModelPatterns[patternKey];
-    document.getElementById("pattern-number").textContent =
-        `${t("Pattern")} ${pattern.number}`;
     document.getElementById("pattern-title").textContent = t(pattern.title);
     document.getElementById("pattern-summary").textContent = t(pattern.summary);
     document.getElementById("pattern-context").textContent = t(pattern.context);

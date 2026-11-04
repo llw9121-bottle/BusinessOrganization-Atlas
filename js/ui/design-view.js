@@ -6,7 +6,6 @@ let activeDesignEpicenter = "customer";
 function updateDesignEpicenter(epicenterKey) {
     activeDesignEpicenter = epicenterKey;
     const epicenter = designEpicenters[epicenterKey];
-    document.getElementById("design-epicenter-label").textContent = t(epicenter.label);
     document.getElementById("design-epicenter-title").textContent = t(epicenter.title);
     document.getElementById("design-epicenter-summary").textContent = t(epicenter.summary);
     document.getElementById("design-epicenter-move").textContent = t(epicenter.move);

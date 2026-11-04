@@ -15,7 +15,8 @@ const EXPECTED_STYLESHEETS = [
 
 const EXPECTED_FONTS = [
     "inter", "noto-sans-sc", "noto-sans-sc-b", "noto-sans-jp", "noto-sans-jp-b",
-    "noto-sans-jp-c", "noto-sans-jp-d", "noto-sans-kr", "noto-sans-kr-b"
+    "noto-sans-jp-c", "noto-sans-jp-d", "noto-sans-kr", "noto-sans-kr-b",
+    "archivo", "jetbrains-mono"
 ].map((name) => `assets/fonts/${name}.woff2`);
 
 // --- Entry document -----------------------------------------------------

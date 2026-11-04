@@ -13,7 +13,7 @@ display: block;
 margin-bottom: 0.65rem;
 color: var(--muted);
 font-family: var(--mono);
-font-size: 0.61rem;
+font-size: 0.75rem;
 letter-spacing: 0.09em;
 text-transform: uppercase;
 }
@@ -33,7 +33,7 @@ font-size: 0.72rem;
 .preset:hover,
 .preset[aria-pressed="true"] {
 border-color: var(--accent);
-background: rgba(184, 82, 56, 0.08);
+background: rgba(176, 42, 30, 0.08);
 }
 .sliders-grid {
 display: grid;
@@ -63,7 +63,7 @@ font-size: 1.12rem;
 .force-value {
 color: var(--accent-deep);
 font-family: var(--mono);
-font-size: 0.63rem;
+font-size: 0.75rem;
 }
 .force-control p {
 min-height: 2.7em;
@@ -124,7 +124,7 @@ background: var(--paper);
 display: block;
 color: var(--muted);
 font-family: var(--mono);
-font-size: 0.55rem;
+font-size: 0.75rem;
 letter-spacing: 0.08em;
 text-transform: uppercase;
 }
@@ -139,7 +139,7 @@ line-height: 1.2;
 .lab-anchor {
 padding: 1rem clamp(1.4rem, 2.8vw, 2.3rem);
 border-top: 1px solid var(--line);
-background: rgba(50, 108, 99, 0.08);
+background: rgba(31, 92, 138, 0.08);
 color: var(--ink-soft);
 font-size: 0.82rem;
 line-height: 1.5;
@@ -147,7 +147,7 @@ line-height: 1.5;
 .lab-anchor strong {
 color: var(--teal);
 font-family: var(--mono);
-font-size: 0.62rem;
+font-size: 0.75rem;
 font-weight: 500;
 letter-spacing: 0.07em;
 text-transform: uppercase;
@@ -176,3 +176,13 @@ line-height: 1.5;
 #view-forces .lab-result-body {
 padding-top: 0;
 }
+
+/* Force vector field: seven forces from a center, imbalance shown as a dashed resultant. */
+.lab-force { margin-top: 1.2rem; padding-top: 0.9rem; border-top: 1px solid var(--line); }
+.force-vector-field { display: block; width: 100%; max-width: 260px; height: auto; margin-inline: auto; }
+.force-vector-field .force-gauge { fill: none; stroke: var(--line); stroke-width: 1; stroke-dasharray: 3 6; }
+.force-vector-field .force-vector { fill: none; stroke: var(--line-strong); stroke-width: 1; }
+.force-vector-field .force-vector.is-dominant { stroke: var(--accent); stroke-width: 2.5; }
+.force-vector-field .force-vector.is-anchor { stroke: var(--teal); stroke-width: 2; }
+.force-vector-field .force-lean { fill: none; stroke: var(--accent-deep); stroke-width: 1.5; stroke-dasharray: 5 5; }
+.force-vector-field .force-center { fill: var(--ink); }

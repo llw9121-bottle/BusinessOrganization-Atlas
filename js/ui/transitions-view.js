@@ -35,7 +35,6 @@ function updateStage(stageKey) {
 function updateRoute(routeKey) {
     activeRoute = routeKey;
     const route = routes[routeKey];
-    document.querySelector(".route-detail > span").textContent = t(route.eyebrow);
     document.getElementById("route-title").textContent = t(route.title);
     document.getElementById("route-summary").textContent = t(route.summary);
     document.getElementById("route-condition").textContent = t(route.condition);

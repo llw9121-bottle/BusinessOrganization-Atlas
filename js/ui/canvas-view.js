@@ -15,8 +15,6 @@ function updateCanvasBlock(blockKey) {
         "Infrastructure": "infrastructure",
         "Financial viability": "financial"
     };
-    document.getElementById("canvas-zone-label").textContent =
-        `${t(block.zone)} · ${t("Block")} ${block.number}`;
     document.getElementById("canvas-title").textContent = t(block.title);
     document.getElementById("canvas-definition").textContent = t(block.definition);
     document.getElementById("canvas-question").textContent = t(block.question);
